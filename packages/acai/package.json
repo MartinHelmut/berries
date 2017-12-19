@@ -7,7 +7,8 @@
     "docs": "jsdoc -c .jsdoc.json --verbose && serve docs",
     "lint": "npx eslint '**/*.js'",
     "test": "jest --env=node",
-    "test:coverage": "jest --env=node --coverage src && cat ./coverage/lcov.info | coveralls"
+    "test:coverage": "jest --env=node --coverage src && cat ./coverage/lcov.info | coveralls",
+    "fmt:check": "npx prettier --tab-width 4 --single-quote --list-different 'src/**/*.js'"
   },
   "keywords": [
     "predict",
