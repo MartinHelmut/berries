@@ -4,4 +4,9 @@ node_js:
   - '8'
 install:
   - npx lerna bootstrap
-after_success: npx lerna run test:coverage
+script:
+  - npm run fmt:check
+  - npm run lint
+  - npm test
+after_success:
+  - npx lerna run test:coverage
