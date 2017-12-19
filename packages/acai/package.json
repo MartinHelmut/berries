@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "docs": "jsdoc -c .jsdoc.json --verbose && serve docs",
+    "lint": "npx eslint '**/*.js'",
     "test": "jest --env=node",
-    "lint": "npx eslint '**/*.js'"
+    "test:coverage": "jest --env=node --coverage src && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [
     "predict",
@@ -32,6 +33,7 @@
     "nodegit": "0.20.3"
   },
   "devDependencies": {
+    "coveralls": "3.0.0",
     "jest": "22.0.0",
     "jsdoc": "3.5.5",
     "serve": "6.4.2"
