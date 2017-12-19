@@ -23,7 +23,7 @@ Tested with Node 8 and NPM 5 and up. Also this repository is organised as a mono
 Clone the repo and run an install:
 
 ```shell
-$ git clone <URL> && npm install && npx lerna bootstrap
+$ git clone git@github.com:MartinHelmut/berries.git && npm install && npx lerna bootstrap
 ```
 
 ## Run tests
