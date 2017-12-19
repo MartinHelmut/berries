@@ -13,10 +13,6 @@
     "lint": "npx lerna run lint",
     "test": "npx lerna run test"
   },
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/MartinHelmut/berries.git"
