@@ -81,13 +81,13 @@ The `hotspots` property contains the calculated score associated to a file as ar
 
 The second argument of the `scanner` function takes an options object:
 
-| Option       | Default                                                              | Description                                                                                                                      |
-| ------------ | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `branchName` | `"master"`                                                           | The branch that should be used. **Attention**: The library performs a real checkout in that repository.                          |
-| `depth`      | `Infinity`                                                           | How many commits in the past should be consired.                                                                                 |
-| `fileGlob`   | `"*"`                                                                | Which files are relevant to check for fixes. This uses a file glob, see [http://www.globtester.com][glurl] to test your pattern. |
-| `pattern`    | `/^(?:(?!branch.+into 'master').)*\bfix(?:ed|es)?|close(?:s|d)?\b/i` | A pattern to match against commit messages. The default one tries to exclude master merges.                                      |
-| `usage`      | `80`                                                                 | The amount of spots used for the result. The number `80` means the top 80% are used.                                             |
+| Option       | Default                                                                            | Description                                                                                                                      |
+| ------------ | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `branchName` | `"master"`                                                                         | The branch that should be used. **Attention**: The library performs a real checkout in that repository.                          |
+| `depth`      | `Infinity`                                                                         | How many commits in the past should be consired.                                                                                 |
+| `fileGlob`   | `"*"`                                                                              | Which files are relevant to check for fixes. This uses a file glob, see [http://www.globtester.com][glurl] to test your pattern. |
+| `pattern`    | /^(?:(?!branch.+into 'master').)\*\bfix(?:ed&#124;es)?&#124;close(?:s&#124;d)?\b/i | A pattern to match against commit messages. The default one tries to exclude master merges.                                      |
+| `usage`      | `80`                                                                               | The amount of spots used for the result. The number `80` means the top 80% are used.                                             |
 
 ## Disclaimer
 
