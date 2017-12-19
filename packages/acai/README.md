@@ -65,6 +65,7 @@ The resulting object contains two main entries for now: `fixes` and `hotspots`. 
 The `hotspots` property contains the calculated score associated to a file as array sorted from the highest score to the lowest:
 
 ```json
+// Hotspots:
 [
     {
         "file": "relative/path/file2.ext",
