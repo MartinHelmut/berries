@@ -7,6 +7,10 @@
   "command": {
     "init": {
       "exact": true
+    },
+    "publish": {
+      "message": "chore(release): publish %s",
+      "exact": true
     }
   }
 }
