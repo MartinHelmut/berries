@@ -29,8 +29,14 @@
     ]
   },
   "lint-staged": {
-    "*.js": [ "npx prettier --write --tab-width 4 --single-quote", "git add" ],
-    "*.md": [ "npx prettier --write", "git add" ]
+    "*.js": [
+      "npx prettier --write --tab-width 4 --single-quote",
+      "git add"
+    ],
+    "*.md": [
+      "npx prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -49,8 +55,6 @@
     "@commitlint/config-conventional": "5.2.3",
     "@commitlint/config-lerna-scopes": "5.2.0",
     "@commitlint/prompt-cli": "5.2.5",
-    "eslint": "4.13.1",
-    "eslint-config-prettier": "2.9.0",
     "husky": "0.14.3",
     "lerna": "2.5.1",
     "lint-staged": "6.0.0",
