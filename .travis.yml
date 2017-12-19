@@ -3,7 +3,4 @@ node_js:
   - 'node'
   - '8'
 install:
-  - npm install -g npx
-  - npx npm install
   - npx lerna bootstrap
-after_success: npm run test:coverage

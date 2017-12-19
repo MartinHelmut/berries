@@ -10,14 +10,8 @@ Helper and tools to speed up and support your daily developer workflow.
 
 ## Table of contents
 
-* [Environment](#environment)
 * [Library](#library)
 * [License](#license)
-
-## Environment
-
-* Node >= 8
-* NPM >= 5
 
 ## Library
 
