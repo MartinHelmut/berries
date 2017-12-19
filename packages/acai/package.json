@@ -35,6 +35,8 @@
   },
   "devDependencies": {
     "coveralls": "3.0.0",
+    "eslint": "4.13.1",
+    "eslint-config-prettier": "2.9.0",
     "jest": "22.0.0",
     "jsdoc": "3.5.5",
     "serve": "6.4.2"
