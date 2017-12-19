@@ -35,11 +35,11 @@ const spots = require('./spots');
 module.exports = async function scanner(
     repoPath,
     {
+        branchName = 'master',
         depth,
-        pattern = /^(?:(?!branch.+into 'master').)*\bfix(?:ed|es)?|close(?:s|d)?\b/i,
         fileGlob = '*',
-        usage = 80,
-        branchName = 'master'
+        pattern = /^(?:(?!branch.+into 'master').)*\bfix(?:ed|es)?|close(?:s|d)?\b/i,
+        usage = 80
     } = {}
 ) {
     const commits = await Promise.all(
