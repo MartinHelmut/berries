@@ -17,6 +17,14 @@
     "node": ">=8",
     "npm": ">=5"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MartinHelmut/berries.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MartinHelmut/berries/issues"
+  },
+  "homepage": "https://github.com/MartinHelmut/berries",
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional",

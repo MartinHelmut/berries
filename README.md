@@ -10,7 +10,7 @@ Helper and tools to speed up and support your daily developer workflow.
 ## Table of contents
 
 * [Environment](#environment)
-* [Helper](#helper)
+* [Library](#library)
 * [License](#license)
 
 ## Environment
@@ -18,9 +18,11 @@ Helper and tools to speed up and support your daily developer workflow.
 * Node >= 8
 * NPM >= 5
 
-## Helper
+## Library
 
-Lorem ipsum ...
+Currently included are the following libraries:
+
+* [@berries/acai](/packages/acai)
 
 ## License
 
