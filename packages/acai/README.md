@@ -17,7 +17,7 @@
 
 **Calculate bug spots in git repositories based on commit messages.**
 
-This JavaScript library calculates a list of files that where bug prone in the recent past. The older a commit gets, the less priority it has. So the results change over time. This prevents files that where fixed a long time ago to be forever on top of the list. The results for the hot spots are only relevant for the project itself and can not be compared from one project to another.
+This JavaScript library calculates a list of files that where bug prone in the recent past. The older a commit gets, the less priority it has. So the results change over time. This prevents files that where fixed a long time ago to be forever on top of the list. The results for the hot spots are only relevant for the project itself and can not be compared from one project to another (except you find a way to do it! 😎).
 
 ## Table of contents
 
@@ -44,17 +44,21 @@ const scanner = require('@berries/acai');
 const results = await scanner('path/to/git/repository');
 ```
 
-The resulting object contains two main entries for now: `fixes` and `hotspots`. The `fixes` property contains an array of objects including the commit message that is associated to a bugfix, a unix timestamp from when the commit is and all files that where touched with that commit. This could look like this:
+The resulting object contains two main entries for now: `fixes` and `hotspots`. The `fixes` property contains an array of objects including the commit message that is associated to a bugfix, a unix timestamp from when the commit is and all files (with relatives path from the root of the repository) that where touched with that commit. This could look like this:
 
 ```json
 // Fixes:
 [
-  {
-    "message": "commit message that introduced a fix",
-    "time": 1500000000000, // unix timestamp
-    "files": ["relative/path/to/file1.ext", "relative/path/file2.ext"]
-  }
-  // ...
+    {
+        "message": "commit message that introduced a fix",
+        "time": 1500000000000,
+        "files": ["relative/path/to/file1.ext", "relative/path/file2.ext"]
+    },
+    {
+        "message": "another bug was closed",
+        "time": 1500000000001,
+        "files": ["relative/path/file2.ext"]
+    }
 ]
 ```
 
@@ -62,15 +66,14 @@ The `hotspots` property contains the calculated score associated to a file as ar
 
 ```json
 [
-  {
-    "file": "relative/path/file2.ext",
-    "score": 1
-  },
-  {
-    "file": "relative/path/to/file1.ext",
-    "score": 0.9
-  }
-  // ...
+    {
+        "file": "relative/path/file2.ext",
+        "score": 1
+    },
+    {
+        "file": "relative/path/to/file1.ext",
+        "score": 0.9
+    }
 ]
 ```
 
@@ -78,13 +81,13 @@ The `hotspots` property contains the calculated score associated to a file as ar
 
 The second argument of the `scanner` function takes an options object:
 
-| Option       | Default                                                              | Description                                                                                                                                            |
-| ------------ | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `branchName` | `"master"`                                                           | The branch that should be used. **Attention**: The library performs a real checkout in that repository.                                                |
-| `depth`      | `Infinity`                                                           | How many commits in the past should be consired.                                                                                                       |
-| `fileGlob`   | `"*"`                                                                | Which files are relevant to check for fixes. This uses a file glob, see [http://www.globtester.com/](http://www.globtester.com/) to test your pattern. |
-| `pattern`    | `/^(?:(?!branch.+into 'master').)*\bfix(?:ed|es)?|close(?:s|d)?\b/i` | A pattern to match against commit messages. The default one tries to exclude master merges.                                                            |
-| `usage`      | `80`                                                                 | The amount of spots used for the result. The number `80` means the top 80% are used.                                                                   |
+| Option       | Default                                                              | Description                                                                                                                      |
+| ------------ | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `branchName` | `"master"`                                                           | The branch that should be used. **Attention**: The library performs a real checkout in that repository.                          |
+| `depth`      | `Infinity`                                                           | How many commits in the past should be consired.                                                                                 |
+| `fileGlob`   | `"*"`                                                                | Which files are relevant to check for fixes. This uses a file glob, see [http://www.globtester.com][glurl] to test your pattern. |
+| `pattern`    | `/^(?:(?!branch.+into 'master').)*\bfix(?:ed|es)?|close(?:s|d)?\b/i` | A pattern to match against commit messages. The default one tries to exclude master merges.                                      |
+| `usage`      | `80`                                                                 | The amount of spots used for the result. The number `80` means the top 80% are used.                                             |
 
 ## Disclaimer
 
@@ -111,6 +114,7 @@ MIT
 [cfurl]: http://commitizen.github.io/cz-cli/
 [ptimg]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 [pturl]: https://github.com/prettier/prettier
+[glurl]: http://www.globtester.com/
 [bpurl]: http://google-engtools.blogspot.de/2011/12/bug-prediction-at-google.html
 [csurl]: https://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41145.pdf
 [biurl]: http://www.boyter.org/2015/07/issues-googles-bug-prediction-algorithm/
