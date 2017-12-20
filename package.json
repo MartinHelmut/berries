@@ -33,7 +33,7 @@
       "prettier --write --tab-width 4 --single-quote",
       "git add"
     ],
-    "*.md": [
+    "*.{md,json}": [
       "prettier --write --tab-width 4",
       "git add"
     ]
