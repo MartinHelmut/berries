@@ -10,18 +10,15 @@
     "commitmsg": "node node_modules/@commitlint/cli/lib/cli.js -e $GIT_PARAMS",
     "precommit": "lint-staged",
     "publish": "lerna publish --conventional-commits --exact",
-    "lint": "lerna run lint",
-    "test": "lerna run test",
-    "fmt:check": "lerna run fmt:check"
+    "lint": "lerna exec --parallel -- eslint '**/*.js'",
+    "test": "cross-env NODE_ENV=development lerna exec --scope @berries/acai --parallel -- jest --env=node",
+    "test:coverage": "cross-env NODE_ENV=development lerna exec -- jest --env=node --coverage src && cat ./coverage/lcov.info | coveralls",
+    "fmt:check": "lerna exec --parallel -- prettier --tab-width 4 --single-quote --list-different 'src/**/*.js'"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MartinHelmut/berries.git"
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
   },
-  "bugs": {
-    "url": "https://github.com/MartinHelmut/berries/issues"
-  },
-  "homepage": "https://github.com/MartinHelmut/berries",
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional",
@@ -55,7 +52,12 @@
     "@commitlint/config-conventional": "5.2.3",
     "@commitlint/config-lerna-scopes": "5.2.0",
     "@commitlint/prompt-cli": "5.2.5",
+    "coveralls": "3.0.0",
+    "cross-env": "5.1.1",
+    "eslint": "4.13.1",
+    "eslint-config-prettier": "2.9.0",
     "husky": "0.14.3",
+    "jest": "22.0.3",
     "lerna": "2.5.1",
     "lint-staged": "6.0.0",
     "prettier": "1.9.2"
