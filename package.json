@@ -10,9 +10,9 @@
     "commitmsg": "node node_modules/@commitlint/cli/lib/cli.js -e $GIT_PARAMS",
     "precommit": "lint-staged",
     "publish": "lerna publish --conventional-commits --exact",
-    "lint": "npx lerna run lint",
-    "test": "npx lerna run test",
-    "fmt:check": "npx lerna run fmt:check"
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "fmt:check": "lerna run fmt:check"
   },
   "repository": {
     "type": "git",
@@ -30,11 +30,11 @@
   },
   "lint-staged": {
     "*.js": [
-      "npx prettier --write --tab-width 4 --single-quote",
+      "prettier --write --tab-width 4 --single-quote",
       "git add"
     ],
     "*.md": [
-      "npx prettier --write --tab-width 4",
+      "prettier --write --tab-width 4",
       "git add"
     ]
   },
@@ -58,7 +58,6 @@
     "husky": "0.14.3",
     "lerna": "2.5.1",
     "lint-staged": "6.0.0",
-    "npx": "9.7.1",
     "prettier": "1.9.2"
   }
 }
