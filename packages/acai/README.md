@@ -97,7 +97,7 @@ This implementation was inspired by multiple other similar packages in different
 * [bugspots][b1url] from [igrigorik][u1url] (Ruby)
 * [python-bugspots][b2url] from [niedbalski][u2url] (Python)
 
-The idea behind this tool came from a 2011 article by Google called ["Bug prediction by Google"][bpurl]. Later there was also a [case study going deeper into detail][csurl]. The whole idea to "predict bugs" on a code base was then stopped because of no real benefits to the developer (see also ["Issues with Google’s Bug Prediction Algorithm"][biurl]).
+The idea behind this tool came from a 2011 article by Google called ["Bug prediction by Google"][bpurl]. Later there was also a [case study going deeper into detail][cgurl]. The whole idea to "predict bugs" on a code base was then stopped because of no real benefits to the developer (see also ["Issues with Google’s Bug Prediction Algorithm"][biurl]).
 
 **So why still do it again?** I ported it to provide a node library on the one hand and a cli tool on the other to use it for further tooling to provide better results for this kind of "bug spot calculation". Not only name files that could contain bugs, but also show where bugs (like a [heatmap][hmurl]) in a file could appear and why they appeared in the past. The heatmap and "why" feature will be implemented in future releases.
 
@@ -117,7 +117,7 @@ MIT
 [pturl]: https://github.com/prettier/prettier
 [glurl]: http://www.globtester.com/
 [bpurl]: http://google-engtools.blogspot.de/2011/12/bug-prediction-at-google.html
-[csurl]: https://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41145.pdf
+[cgurl]: https://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41145.pdf
 [biurl]: http://www.boyter.org/2015/07/issues-googles-bug-prediction-algorithm/
 [b1url]: https://github.com/igrigorik/bugspots
 [u1url]: https://github.com/igrigorik
