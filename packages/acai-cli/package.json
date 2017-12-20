@@ -1,10 +1,10 @@
 {
-  "name": "@berries/acai",
+  "name": "@berries/acai-cli",
   "version": "1.0.0",
-  "description": "Library to calculate bugs in git repositories based on commit messages.",
-  "main": "index.js",
+  "description": "CLI tool calculate bugs in git repositories based on commit messages.",
+  "bin": "bin.js",
   "scripts": {
-    "docs": "jsdoc -c .jsdoc.json --verbose && serve docs"
+    "docs": "echo 'There is no documentation for this package.'"
   },
   "keywords": [
     "predict",
@@ -12,7 +12,7 @@
     "git",
     "commit",
     "acai",
-    "library",
+    "cli",
     "berries"
   ],
   "author": "Martin Helmut Fieber <info@martin-fieber.de> (http://martin-fieber.de)",
@@ -24,24 +24,17 @@
   "bugs": {
     "url": "https://github.com/MartinHelmut/berries/issues"
   },
-  "homepage": "https://github.com/MartinHelmut/berries/tree/master/packages/acai",
+  "homepage": "https://github.com/MartinHelmut/berries/tree/master/packages/acai-cli",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
   },
   "files": [
-    "index.js",
-    "src/",
-    "__mocks__"
+    "bin.js",
+    "src/"
   ],
-  "dependencies": {
-    "minimatch": "3.0.4",
-    "nodegit": "0.20.3"
-  },
-  "devDependencies": {
-    "jsdoc": "3.5.5",
-    "serve": "6.4.2"
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   }

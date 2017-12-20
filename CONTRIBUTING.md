@@ -40,6 +40,14 @@ and to lint the code:
 $ npm run lint
 ```
 
+You can also run a prettier verification for all JS files in all packages with:
+
+```shell
+$ npm run fmt:check
+```
+
+This will list changes that would be made on commit (commit hook is installed with husky).
+
 ## Show documentation
 
 To create and serve the documentation run the following command **inside a specific package**:
