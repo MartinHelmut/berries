@@ -70,7 +70,7 @@ $ git checkout -b task/do-something
 
 Add your changes and run `npm run commit` to start the commitizen cli to create a proper commit message.
 
-Create a "Merge Request" on GitHub and be awesome! 😎
+Create a "Pull Request" on Github and be awesome! 😎
 
 ## Recommended workflow for release
 
