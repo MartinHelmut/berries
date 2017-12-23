@@ -5,20 +5,82 @@ are the best!
 
 ## Contents
 
-* [Environment](#environment)
-* [Setup](#setup)
-* [Run tests](#run-tests)
-* [Show documentation](#show-documentation)
-* [Commit changes](#commit-changes)
-* [Recommended workflow for release](#recommended-workflow-for-release)
+* [Issues](#issues)
+  * [General](#general)
+  * [Labels](#labels)
+    * [Common labels](#common-labels)
+    * [Type labels](#type-labels)
+    * [Status labels](#status-labels)
+* [Working in the code](#working-in-the-code)
+  * [Environment](#environment)
+  * [Setup](#setup)
+  * [Run tests](#run-tests)
+  * [Show documentation](#show-documentation)
+  * [Commit changes](#commit-changes)
+  * [Recommended workflow for release](#recommended-workflow-for-release)
 
 ---
 
-## Environment
+## Issues
+
+### General
+
+Issues have a specific pattern for the title:
+
+```markdown
+package-name: Here is the title
+```
+
+that could look like:
+
+```markdown
+acai-cli: Write documentation for tool
+```
+
+The description should be as clear as possible. Sub-tasks could also be added by a task list.
+
+### Labels
+
+Right now there are three types of labels:
+
+* Common labels
+* Type labels
+* Status labels
+
+#### Common labels
+
+| Label            | Use case                                                                                                 |
+| ---------------- | -------------------------------------------------------------------------------------------------------- |
+| good first issue | This label is set if the issue could be resolved by someone who does not know the project.               |
+| help wanted      | If there is something where people with different knowledge could really help pushing the issue further. |
+
+#### Type labels
+
+| Label               | Description                                                 |
+| ------------------- | ----------------------------------------------------------- |
+| type: bug           | This label is used if the issue describes a bug.            |
+| type: documentation | Write or change documentation for the project.              |
+| type: draft         | Describes as a ongoing process a new berry library or tool. |
+| type: feature       | Implements a new feature ot changes existing behaivior.     |
+| type: question      | Something that should be discussed with others.             |
+
+#### Status labels
+
+| Label               | Status                                                                   |
+| ------------------- | ------------------------------------------------------------------------ |
+| status: blocked     | An issue is block of reasons that are mentioned inside the issue itself. |
+| status: in progress | The one who is assigned works on that issue.                             |
+| status: PR made     | An PR was made and the issue is in his final steps.                      |
+
+**Note:** For _not started yet_ or _finished_ are no status labels required.
+
+## Working in the code
+
+### Environment
 
 Tested with Node 8 and NPM 5 and up. Also this repository is organised as a monorepo and uses [lerna][lnurl].
 
-## Setup
+### Setup
 
 Clone the repo and run an install:
 
@@ -26,7 +88,7 @@ Clone the repo and run an install:
 $ git clone git@github.com:MartinHelmut/berries.git && npm install && npx lerna bootstrap
 ```
 
-## Run tests
+### Run tests
 
 To run all tests execute
 
@@ -48,7 +110,7 @@ $ npm run fmt:check
 
 This will list changes that would be made on commit (commit hook is installed with husky).
 
-## Show documentation
+### Show documentation
 
 To create and serve the documentation run the following command **inside a specific package**:
 
@@ -56,7 +118,7 @@ To create and serve the documentation run the following command **inside a speci
 $ npm run docs
 ```
 
-## Commit changes
+### Commit changes
 
 **This repo is is Commitizen-friendly!** ([read more][czcli])
 
@@ -72,7 +134,7 @@ Add your changes and run `npm run commit` to start the commitizen cli to create 
 
 Create a "Pull Request" on Github and be awesome! 😎
 
-## Recommended workflow for release
+### Recommended workflow for release
 
 1. Make changes
 2. Commit those changes with `npm run commit`
