@@ -63,6 +63,19 @@ module.exports = {
         return commits.filter(commit => fn(this.getCommitMessage(commit)));
     },
     /**
+     * Get an object representation of the commit message
+     *
+     * @param {Object} commit The adapted commit message
+     * @returns {Promise<Commit>} A promise resolving to the commit descriptor
+     */
+    async getDescriptor(commit) {
+        return {
+            message: this.getCommitMessage(commit),
+            time: commit.timeMs(),
+            files: await this.getCommitFiles(commit)
+        };
+    },
+    /**
      * Get the changed files for the commit
      *
      * @private
@@ -90,19 +103,5 @@ module.exports = {
      */
     getCommitMessage(commit) {
         return commit.message().split('\n')[0];
-    },
-    /**
-     * Get an object representation of the commit message
-     *
-     * @private
-     * @param {Object} commit The adapted commit message
-     * @returns {Promise<Commit>} A promise resolving to the commit descriptor
-     */
-    async getDescriptor(commit) {
-        return {
-            message: this.getCommitMessage(commit),
-            time: commit.timeMs(),
-            files: await this.getCommitFiles(commit)
-        };
     }
 };
