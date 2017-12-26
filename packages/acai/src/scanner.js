@@ -22,6 +22,7 @@ const spots = require('./spots');
  * @namespace ScannerResult
  * @property {Commit[]} fixes A list if found fix commits
  * @property {HotSpot[]} hotSpots A list of calculated hotSpots
+ * @property {Number} time Time in milliseconds the calculation run
  */
 
 /**
@@ -40,6 +41,7 @@ module.exports = async function scanner(
         pattern = /^(?:(?!branch.+into 'master').)*\bfix(?:ed|es)?|close(?:s|d)?\b/i
     } = {}
 ) {
+    const startTime = Date.now();
     const commits = await Promise.all(
         git
             .filterCommits(
@@ -51,6 +53,7 @@ module.exports = async function scanner(
 
     const fixes = commit.filterByFileGlob(commits, fileGlob);
     const hotspots = spots.normalize(spots.calculate(fixes));
+    const time = Date.now() - startTime;
 
-    return { fixes, hotspots };
+    return { fixes, hotspots, time };
 };
