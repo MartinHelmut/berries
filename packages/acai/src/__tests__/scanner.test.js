@@ -31,7 +31,8 @@ describe('scanner()', () => {
                         file: expect.any(String),
                         score: expect.any(Number)
                     })
-                ])
+                ]),
+                time: expect.any(Number)
             })
         );
     });

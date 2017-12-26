@@ -41,12 +41,12 @@ The simplest way to use the library to scan for bug spots in files could be expl
 
 ```javascript
 (async () => {
-    const scanner = require('@berries/acai');
-    const results = await scanner('path/to/git/repository');
+    const scanner = require("@berries/acai");
+    const results = await scanner("path/to/git/repository");
 })();
 ```
 
-The resulting object contains two main entries for now: `fixes` and `hotspots`. The `fixes` property contains an array of objects including the commit message that is associated to a bugfix, a unix timestamp from when the commit is and all files (with relatives path from the root of the repository) that where touched with that commit. This could look like this:
+The resulting object contains `fixes`, `hotspots` and `time`. The `fixes` property contains an array of objects including the commit message that is associated to a bugfix, a unix timestamp from when the commit is and all files (with relatives path from the root of the repository) that where touched with that commit. This could look like this:
 
 ```json
 // Fixes:
@@ -79,6 +79,8 @@ The `hotspots` property contains the calculated score associated to a file as ar
     }
 ]
 ```
+
+The `time` property contains the execution time for the calculation in milliseconds.
 
 ### Options
 
