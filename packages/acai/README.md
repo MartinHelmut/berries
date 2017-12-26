@@ -41,8 +41,8 @@ The simplest way to use the library to scan for bug spots in files could be expl
 
 ```javascript
 (async () => {
-  const scanner = require('@berries/acai');
-  const results = await scanner('path/to/git/repository');
+    const scanner = require('@berries/acai');
+    const results = await scanner('path/to/git/repository');
 })();
 ```
 
@@ -90,7 +90,6 @@ The second argument of the `scanner` function takes an options object:
 | `depth`      | `Infinity`                                                                         | How many commits in the past should be consired.                                                                                 |
 | `fileGlob`   | `"*"`                                                                              | Which files are relevant to check for fixes. This uses a file glob, see [http://www.globtester.com][glurl] to test your pattern. |
 | `pattern`    | /^(?:(?!branch.+into 'master').)\*\bfix(?:ed&#124;es)?&#124;close(?:s&#124;d)?\b/i | A pattern to match against commit messages. The default one tries to exclude master merges.                                      |
-| `usage`      | `80`                                                                               | The amount of spots used for the result. The number `80` means the top 80% are used.                                             |
 
 ## Disclaimer
 

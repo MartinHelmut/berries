@@ -15,6 +15,7 @@ module.exports = {
     /**
      * Reduce results to top percent passed by usage
      *
+     * @deprecated
      * @param {HotSpot[]} hotSpots A list if calculated hot-spots
      * @param {number} [usage=1] A percentage value as reduced number, 1 == 100%
      * @returns {HotSpot[]} Returns the reduced amount of hot-spots given by "usage"
