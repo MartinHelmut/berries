@@ -38,10 +38,6 @@
     "minimatch": "3.0.4",
     "nodegit": "0.20.3"
   },
-  "devDependencies": {
-    "jsdoc": "3.5.5",
-    "serve": "6.4.2"
-  },
   "publishConfig": {
     "access": "public"
   }
