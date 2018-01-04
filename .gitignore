@@ -68,5 +68,5 @@ jspm_packages/
 .Trash-*
 .nfs*
 .idea/
-docs/
+packages/**/docs/
 lerna-debug.log

@@ -7,14 +7,36 @@
 const git = require('./adapter/git');
 const commit = require('./commit');
 const spots = require('./spots');
+const actions = require('./actions');
+
+/**
+ * @global
+ * @namespace ActionMeta
+ * @extends Object
+ */
+
+/**
+ * @global
+ * @namespace Action
+ * @property {('LOG'|'START'|'COMMIT'|'COMMITS'|'FIXES'|'HOTSPOTS'|'END')} type Possible action types
+ * @property {Object} payload The actual action payload defined by the action type
+ * @property {ActionMeta} [meta] Secondary values tied to the action type
+ */
+
+/**
+ * @global
+ * @callback dispatchCallback A callback for external use of inner actions getting called
+ * @param {Action} action Acai action for external usage
+ */
 
 /**
  * @global
  * @namespace ScannerOptions
- * @property {number} [depth=Infinity] Scan depth or "how many commits in the past"
- * @property {RegExp} [pattern=/^(?:(?!branch.+into\s'master').)*\bfix(?:ed|es)?|close(?:s|d)?\b/i] An expression to match commit messages and excludes master merges
- * @property {string} [fileGlob=*] A glob pattern for which files should be considered
  * @property {string} [branchName=master] The branch name to scan
+ * @property {number} [depth=Infinity] Scan depth or "how many commits in the past"
+ * @property {string} [fileGlob=*] A glob pattern for which files should be considered
+ * @property {dispatchCallback} [dispatch] An interface for external use of inner actions
+ * @property {RegExp} [pattern=/^(?:(?!branch.+into\s'master').)*\bfix(?:ed|es)?|close(?:s|d)?\b/i] An expression to match commit messages and excludes master merges
  */
 
 /**
@@ -38,22 +60,37 @@ module.exports = async function scanner(
         branchName = 'master',
         depth,
         fileGlob = '*',
+        dispatch = () => undefined,
         pattern = /^(?:(?!branch.+into 'master').)*\bfix(?:ed|es)?|close(?:s|d)?\b/i
     } = {}
 ) {
     const startTime = Date.now();
+    dispatch(actions.start(startTime));
+
     const commits = await Promise.all(
         git
             .filterCommits(
                 await git.getCommits(repoPath, branchName, depth),
                 commitMessage => pattern.test(commitMessage)
             )
-            .map(async commit => await git.getDescriptor(commit))
+            .map(async commit => {
+                const descriptor = await git.getDescriptor(commit);
+                dispatch(actions.commit(descriptor));
+
+                return descriptor;
+            })
     );
+    dispatch(actions.commits(commits));
 
     const fixes = commit.filterByFileGlob(commits, fileGlob);
+    dispatch(actions.fixes(fixes));
+
     const hotspots = spots.normalize(spots.calculate(fixes));
-    const time = Date.now() - startTime;
+    dispatch(actions.hotspots(hotspots));
+
+    const endTime = Date.now();
+    const time = endTime - startTime;
+    dispatch(actions.end(endTime));
 
     return { fixes, hotspots, time };
 };
