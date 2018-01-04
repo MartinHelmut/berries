@@ -33,7 +33,11 @@
     "bin.js",
     "src/"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@berries/acai": "1.0.0",
+    "ora": "1.3.0",
+    "yargs": "10.0.3"
+  },
   "devDependencies": {},
   "publishConfig": {
     "access": "public"
