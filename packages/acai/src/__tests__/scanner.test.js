@@ -3,6 +3,7 @@
 jest.mock('nodegit');
 const nodegit = require('nodegit');
 const scanner = require('../scanner');
+const actions = require('../actions');
 
 describe('scanner()', () => {
     beforeEach(() =>
@@ -35,5 +36,19 @@ describe('scanner()', () => {
                 time: expect.any(Number)
             })
         );
+    });
+
+    describe('actions', () => {
+        test('dispatches', async () => {
+            const dispatch = jest.fn();
+            await scanner('repo/path', { dispatch });
+
+            expect(dispatch.mock.calls.length).toBeGreaterThan(0);
+            expect(dispatch).toDispatch(actions.START);
+            expect(dispatch).toDispatch(actions.COMMITS);
+            expect(dispatch).toDispatch(actions.FIXES);
+            expect(dispatch).toDispatch(actions.HOTSPOTS);
+            expect(dispatch).toDispatch(actions.END);
+        });
     });
 });

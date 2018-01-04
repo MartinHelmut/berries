@@ -4,7 +4,7 @@
   "description": "Library to calculate bugs in git repositories based on commit messages.",
   "main": "index.js",
   "scripts": {
-    "docs": "jsdoc -c .jsdoc.json --verbose && serve docs"
+    "docs": "jsdoc -c .jsdoc.json --verbose && npx serve docs"
   },
   "keywords": [
     "predict",
@@ -34,11 +34,17 @@
     "src/",
     "__mocks__"
   ],
+  "jest": {
+    "setupTestFrameworkScriptFile": "./src/setupTests.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "minimatch": "3.0.4",
     "nodegit": "0.20.3"
   },
-  "publishConfig": {
-    "access": "public"
+  "devDependencies": {
+    "jsdoc": "3.5.5"
   }
 }

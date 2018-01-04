@@ -11,9 +11,9 @@
     "precommit": "lint-staged",
     "publish": "lerna publish --conventional-commits --exact",
     "lint": "lerna exec --parallel -- eslint '**/*.js'",
-    "test": "cross-env NODE_ENV=development lerna exec --parallel -- jest --env=node",
+    "test": "cross-env NODE_ENV=development lerna exec --parallel --scope=@berries/acai -- jest --env=node",
     "test:coverage": "cross-env NODE_ENV=development lerna exec -- jest --env=node --coverage src && cat ./coverage/lcov.info | coveralls",
-    "fmt:check": "lerna exec --parallel -- prettier --tab-width 4 --single-quote --list-different 'src/**/*.js'"
+    "fmt:check": "lerna exec --parallel --scope=@berries/acai -- prettier --tab-width 4 --single-quote --list-different 'src/**/*.js'"
   },
   "engines": {
     "node": ">=8",
@@ -59,7 +59,6 @@
     "execa": "0.8.0",
     "husky": "0.14.3",
     "jest": "22.0.3",
-    "jsdoc": "3.5.5",
     "lerna": "2.5.1",
     "lint-staged": "6.0.0",
     "prettier": "1.9.2",
