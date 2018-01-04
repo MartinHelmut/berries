@@ -82,9 +82,9 @@ module.exports = class HumanFormatter {
         }
 
         this.spinner.succeed(
-            `Found ${fixes.length} fixes in ${
+            `Found ${fixes.length} fix(es) in ${
                 hotspots.length
-            } files (in ${timeInSeconds}s).`
+            } file(s) (in ${timeInSeconds}s).`
         );
 
         return `\nShow the top ${SHOW_TOP_AMOUNT} hot spots:\n  ${'Score'.padEnd(
