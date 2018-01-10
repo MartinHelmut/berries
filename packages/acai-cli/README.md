@@ -35,10 +35,10 @@ This is the command line tool that uses the [@berries/acai][acurl] library to ca
 
 ## Usage
 
-You could either install the CLI with `npm i acai-cli -g` or use [npx][npurl] directly by running _acai-cli_ inside a git repository (other version control systems will be follow):
+You can install the CLI with `npm i acai-cli -g` run the _acai-cli_ inside a git repository (other version control systems will be follow):
 
 ```shell
-$ npx acai
+$ acai
 ```
 
 ### Options
@@ -65,4 +65,3 @@ MIT
 [ptimg]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 [pturl]: https://github.com/prettier/prettier
 [acurl]: https://github.com/MartinHelmut/berries/tree/master/packages/acai
-[npurl]: https://www.npmjs.com/package/npx
