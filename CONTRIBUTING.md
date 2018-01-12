@@ -85,7 +85,7 @@ Tested with Node 8 and NPM 5 and up. Also this repository is organised as a mono
 Clone the repo and run an install:
 
 ```shell
-$ git clone git@github.com:MartinHelmut/berries.git && npm install && npx lerna bootstrap
+$ git clone git@github.com:MartinHelmut/berries.git && cd berries && npm install && npx lerna bootstrap
 ```
 
 ### Run tests
@@ -138,7 +138,7 @@ Create a "Pull Request" on Github and be awesome! 😎
 
 1. Make changes
 2. Commit those changes with `npm run commit`
-3. Make sure all tests turn green with `npm run test`
+3. Make sure all tests turn green with `npm test`
 4. Publish: `npm run publish`
 5. **Done!**
 
