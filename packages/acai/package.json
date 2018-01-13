@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Library to calculate bugs in git repositories based on commit messages.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "docs": "jsdoc -c .jsdoc.json --verbose && npx serve docs"
   },
