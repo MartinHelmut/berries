@@ -6,18 +6,20 @@ are the best!
 ## Contents
 
 * [Issues](#issues)
-  * [General](#general)
-  * [Labels](#labels)
-    * [Common labels](#common-labels)
-    * [Type labels](#type-labels)
-    * [Status labels](#status-labels)
+    * [General](#general)
+    * [Labels](#labels)
+        * [Common labels](#common-labels)
+        * [Type labels](#type-labels)
+        * [Status labels](#status-labels)
 * [Working in the code](#working-in-the-code)
-  * [Environment](#environment)
-  * [Setup](#setup)
-  * [Run tests](#run-tests)
-  * [Show documentation](#show-documentation)
-  * [Commit changes](#commit-changes)
-  * [Recommended workflow for release](#recommended-workflow-for-release)
+    * [Environment](#environment)
+    * [Setup](#setup)
+    * [Tests](#tests)
+    * [Format check](#format-check)
+    * [Show documentation](#show-documentation)
+    * [Commit changes](#commit-changes)
+    * [Recommended workflow for release](#recommended-workflow-for-release)
+* [Be Nice](#be-nice)
 
 ---
 
@@ -37,7 +39,14 @@ that could look like:
 acai-cli: Write documentation for tool
 ```
 
-The description should be as clear as possible. Sub-tasks could also be added by a task list.
+If you report a bug, please try to:
+
+* Perform a web / GitHub search to avoid creating a duplicate ticket.
+* Include enough information to reproduce the problem.
+* Mention the exact version of the project causing you problems, as well as any related software and versions (such as operating system, browser, etc.).
+* Test against the latest version of the project (and if possible also the master branch) to see if the problem has already been fixed.
+
+Once you have tried the above, create a GitHub issue notifying your bug report.
 
 ### Labels
 
@@ -76,6 +85,15 @@ Right now there are three types of labels:
 
 ## Working in the code
 
+If you want to contribute code, please:
+
+* Follow the same [coding style](#format-check) as used in the project.
+* Add an automated test that verifies your code change like described in the [Tests chapter](#tests).
+* Write [good commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), explain what your patch does, and why it is needed. How to is described in the [Commit changes chapter](#commit-changes).
+* Keep it simple: Any patch that changes a lot of code or is difficult to understand should be discussed before you put in the effort.
+
+Once you have tried the above, create a GitHub pull request with your changes changes and feel awesome 🎉.
+
 ### Environment
 
 Tested with Node 8 and NPM 5 and up. Also this repository is organised as a monorepo and uses [lerna][lnurl].
@@ -88,9 +106,9 @@ Clone the repo and run an install:
 $ git clone git@github.com:MartinHelmut/berries.git && cd berries && npm install && npx lerna bootstrap
 ```
 
-### Run tests
+### Tests
 
-To run all tests execute
+Tests are written in [Jest][jturl]. To run all tests execute
 
 ```shell
 $ npm test
@@ -101,6 +119,8 @@ and to lint the code:
 ```shell
 $ npm run lint
 ```
+
+### Format check
 
 You can also run a prettier verification for all JS files in all packages with:
 
@@ -144,6 +164,11 @@ Create a "Pull Request" on Github and be awesome! 😎
 
 For more information on building a release see [https://github.com/conventional-changelog/standard-version][svurl]
 
+## Be Nice
+
+Please follow the defined [code of conduct](CODE_OF_CONDUCT.md).
+
 [lnurl]: https://github.com/lerna/lerna
 [czcli]: http://commitizen.github.io/cz-cli/
 [svurl]: https://github.com/conventional-changelog/standard-version
+[jturl]: https://facebook.github.io/jest/
