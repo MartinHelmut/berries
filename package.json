@@ -26,12 +26,8 @@
     ]
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,md,json}": [
       "prettier --write --tab-width 4 --single-quote",
-      "git add"
-    ],
-    "*.{md,json}": [
-      "prettier --write --tab-width 4",
       "git add"
     ]
   },
