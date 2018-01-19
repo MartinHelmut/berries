@@ -26,9 +26,9 @@ module.exports = function getConfiguredArgv() {
             },
             format: {
                 alias: 'F',
-                description: 'Return format for the scanner output',
-                requiresArg: true,
-                choices: formatOptions
+                choices: formatOptions,
+                default: 'human',
+                description: 'Return format for the scanner output'
             },
             help: {
                 alias: 'h',
