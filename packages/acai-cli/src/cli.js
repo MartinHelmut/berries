@@ -13,7 +13,7 @@ const { getFormatter } = require('./format');
 // Right now I use it to use the formatter if initialized for the error handling.
 let formatter = null;
 
-async function main({ cwd = process.cwd(), format = 'human' }) {
+async function main({ cwd = process.cwd(), format }) {
     const repo = path.resolve(cwd);
 
     formatter = getFormatter(format);
