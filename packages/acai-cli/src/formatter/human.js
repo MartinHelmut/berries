@@ -13,7 +13,7 @@
 const ora = require('ora');
 const actions = require('@berries/acai/src/actions');
 
-const SHOW_TOP_AMOUNT = 20;
+const TO_LONG_FOR_ONE_SCREEN = 30;
 
 module.exports = class HumanFormatter {
     /**
@@ -71,30 +71,31 @@ module.exports = class HumanFormatter {
     flush() {
         const { fixes, hotspots, time } = this.result;
         const timeInSeconds = (time / 1000).toFixed(2);
-        const topSpots = hotspots.slice(0, SHOW_TOP_AMOUNT);
-        const maxLenght = topSpots.reduce((length, spot) => {
+        const maxLenght = hotspots.reduce((length, spot) => {
             const spotLength = String(spot.score).length;
             return length < spotLength ? spotLength : length;
         }, 0);
-
-        if (this.timer) {
-            clearTimeout(this.timer);
-        }
-
-        this.spinner.succeed(
-            `Found ${fixes.length} fix(es) in ${
-                hotspots.length
-            } file(s) (in ${timeInSeconds}s).`
-        );
-
-        return `\nShow the top ${SHOW_TOP_AMOUNT} hot spots:\n  ${'Score'.padEnd(
-            maxLenght
-        )}   File\n${topSpots
+        const successMessage = `Found ${fixes.length} fix(es) in ${
+            hotspots.length
+        } file(s) (in ${timeInSeconds}s).`;
+        const output = `\nShow ${
+            hotspots.length
+        } hot spots:\n  ${'Score'.padEnd(maxLenght)}   File\n${hotspots
             .map(
                 ({ score, file }) =>
                     `  ${String(score).padEnd(maxLenght)} - ${file}`
             )
             .join('\n')}\n`;
+
+        if (this.timer) {
+            clearTimeout(this.timer);
+        }
+
+        this.spinner.succeed(successMessage);
+
+        return hotspots.length > TO_LONG_FOR_ONE_SCREEN
+            ? `${output}\n${successMessage} Top results are on top of the lits.`
+            : output;
     }
     /**
      * Format an error message
