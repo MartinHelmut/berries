@@ -21,7 +21,6 @@ module.exports = function getConfiguredArgv() {
             cwd: {
                 alias: 'd',
                 description: 'Set the path to a repository',
-                requiresArg: true,
                 type: 'string'
             },
             format: {
