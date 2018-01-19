@@ -41,8 +41,8 @@ The simplest way to use the library to scan for bug spots in files could be expl
 
 ```javascript
 (async () => {
-    const scanner = require("@berries/acai");
-    const results = await scanner("path/to/git/repository");
+    const scanner = require('@berries/acai');
+    const results = await scanner('path/to/git/repository');
 })();
 ```
 
