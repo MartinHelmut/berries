@@ -6,7 +6,7 @@
 
 const path = require('path');
 const scanner = require('@berries/acai');
-const argv = require('./argv')();
+const argv = require('./argv')(process.argv);
 const { getFormatter } = require('./format');
 
 // @todo: This is not the best way to do this, but it works for now. Still, this should be refactored!

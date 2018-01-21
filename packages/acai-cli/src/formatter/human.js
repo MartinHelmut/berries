@@ -18,13 +18,16 @@ const TO_LONG_FOR_ONE_SCREEN = 30;
 module.exports = class HumanFormatter {
     /**
      * Initialize human the formatter
+     *
+     * @param {FormatterOptions} options Format options
      */
-    constructor() {
+    constructor({ stream }) {
         this.result = { fixes: [], hotspots: [], time: 0 };
         this.spinner = ora({
             text: 'Calculating bug spots',
             spinner: 'dots',
-            color: 'green'
+            color: 'green',
+            stream
         }).start();
 
         this.timer = setTimeout(() => {
@@ -94,7 +97,7 @@ module.exports = class HumanFormatter {
         this.spinner.succeed(successMessage);
 
         return hotspots.length > TO_LONG_FOR_ONE_SCREEN
-            ? `${output}\n${successMessage} Top results are on top of the lits.`
+            ? `${output}\n${successMessage} Top results are on top of the list.`
             : output;
     }
     /**
