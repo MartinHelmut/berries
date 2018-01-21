@@ -56,12 +56,12 @@ $ npx @berries/acai-cli
 
 ### Options
 
-| Option    | Short | Description                                                            |
-| --------- | ----- | ---------------------------------------------------------------------- |
-| --help    | -h    | Show the help text for acai command line tool                          |
-| --version |       | Show the installed CLI version                                         |
-| --cwd     | -d    | Define a different git repository, e.g.: `$ acai -d "path/to/git/repo` |
-| --format  | -F    | Define the output format. Available options: `human`                   |
+| Option    | Short | Description                                                             |
+| --------- | ----- | ----------------------------------------------------------------------- |
+| --help    | -h    | Show the help text for acai command line tool                           |
+| --version |       | Show the installed CLI version                                          |
+| --cwd     | -d    | Define a different git repository, e.g.: `$ acai -d "path/to/git/repo"` |
+| --format  | -F    | Define the output format. Available options: `human`                    |
 
 ## License
 
