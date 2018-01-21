@@ -2,7 +2,9 @@
   "name": "@berries/acai-cli",
   "version": "1.0.2",
   "description": "CLI tool calculate bugs in git repositories based on commit messages.",
-  "bin": "bin.js",
+  "bin": {
+    "acai": "bin.js"
+  },
   "scripts": {
     "docs": "echo 'There is no documentation for this package.'"
   },
