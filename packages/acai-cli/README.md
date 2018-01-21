@@ -2,7 +2,7 @@
 
 <p align="center">
     <img
-        src="logo.svg"
+        src="https://raw.githubusercontent.com/MartinHelmut/berries/master/packages/acai-cli/logo.svg?sanitize=true"
         width="350"
         height="255"
         alt="Berries acai cli logo with three berries and two leafs shown."
