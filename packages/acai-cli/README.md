@@ -22,6 +22,15 @@ This is the command line tool that uses the [@berries/acai][acurl] library to ca
 
 **Important note:** The results for the hot spots are only relevant for the project itself and can not be compared from one project to another (except you find a way to do it! 😉).
 
+<p align="center">
+    <img
+        src="https://raw.githubusercontent.com/MartinHelmut/berries/master/packages/acai-cli/usage-example.svg"
+        width="620"
+        height="378"
+        alt="Berries acai cli logo with three berries and two leafs shown."
+    />
+</p>
+
 ## Table of contents
 
 * [Environment](#environment)
