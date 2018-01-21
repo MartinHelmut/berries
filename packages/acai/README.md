@@ -9,6 +9,7 @@
     />
 </p>
 
+[![npm][npmimg]][npmurl]
 [![Build Status][bsurl]][bsimg]
 [![Coverage Status][csimg]][csurl]
 [![lerna][lnimg]][lnurl]
@@ -37,13 +38,27 @@ This JavaScript library calculates a list of files that where bug prone in the r
 
 ### Quick start
 
+Install the library with:
+
+```shell
+$ npm install @berries/acai
+```
+
 The simplest way to use the library to scan for bug spots in files could be explained in the following example:
 
 ```javascript
+// index.js
 (async () => {
     const scanner = require('@berries/acai');
     const results = await scanner('path/to/git/repository');
+    console.log(results);
 })();
+```
+
+Not run that file and it will print the results of that repository:
+
+```shell
+$ node ./index.js
 ```
 
 The resulting object contains `fixes`, `hotspots` and `time`. The `fixes` property contains an array of objects including the commit message that is associated to a bugfix, a unix timestamp from when the commit is and all files (with relatives path from the root of the repository) that where touched with that commit. This could look like this:
@@ -109,6 +124,8 @@ The idea behind this tool came from a 2011 article by Google called ["Bug predic
 
 MIT
 
+[npmurl]: https://www.npmjs.com/package/@berries/acai
+[npmimg]: https://img.shields.io/npm/v/@berries/acai.svg
 [bsurl]: https://travis-ci.org/MartinHelmut/berries.svg?branch=master
 [bsimg]: https://travis-ci.org/MartinHelmut/berries
 [csimg]: https://coveralls.io/repos/github/MartinHelmut/berries/badge.svg?branch=master

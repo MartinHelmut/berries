@@ -33,7 +33,8 @@
   "files": [
     "index.js",
     "src/",
-    "__mocks__"
+    "__mocks__",
+    "logo.svg"
   ],
   "jest": {
     "setupTestFrameworkScriptFile": "./src/setupTests.js"
