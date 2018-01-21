@@ -9,6 +9,7 @@
     />
 </p>
 
+[![npm][npmimg]][npmurl]
 [![Build Status][bsurl]][bsimg]
 [![Coverage Status][csimg]][csurl]
 [![lerna][lnimg]][lnurl]
@@ -25,7 +26,7 @@ This is the command line tool that uses the [@berries/acai][acurl] library to ca
 
 * [Environment](#environment)
 * [Usage](#usage)
-  * [Options](#options)
+    * [Options](#options)
 * [License](#license)
 
 ## Environment
@@ -35,10 +36,22 @@ This is the command line tool that uses the [@berries/acai][acurl] library to ca
 
 ## Usage
 
-You can install the CLI with `npm i acai-cli -g` run the _acai-cli_ inside a git repository (other version control systems will be follow):
+You can install the CLI with:
+
+```shell
+$ npm i @berries/acai-cli -g
+```
+
+and run the _acai-cli_ inside a git repository (other version control systems will be follow):
 
 ```shell
 $ acai
+```
+
+or use npx and run acai directly:
+
+```shell
+$ npx @berries/acai-cli
 ```
 
 ### Options
@@ -54,6 +67,8 @@ $ acai
 
 MIT
 
+[npmurl]: https://www.npmjs.com/package/@berries/acai-cli
+[npmimg]: https://img.shields.io/npm/v/@berries/acai-cli.svg
 [bsurl]: https://travis-ci.org/MartinHelmut/berries.svg?branch=master
 [bsimg]: https://travis-ci.org/MartinHelmut/berries
 [csimg]: https://coveralls.io/repos/github/MartinHelmut/berries/badge.svg?branch=master
