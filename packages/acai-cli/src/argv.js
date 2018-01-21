@@ -13,8 +13,8 @@
 const yargs = require('yargs');
 const { options: formatOptions } = require('./format');
 
-module.exports = function getConfiguredArgv() {
-    const { argv } = yargs
+module.exports = function getConfiguredArgv(input) {
+    const { argv } = yargs(input)
         .detectLocale(false)
         .usage('Usage: $0 [options]')
         .options({

@@ -41,30 +41,37 @@
  * @returns {(string|void)} The formatted error message
  */
 
+/**
+ * @global
+ * @namespace FormatterOptions
+ * @property {WritableStream} [stream=process.stdout] Stream to write the output
+ */
+
 const formatter = { human: require('./formatter/human') };
-const options = Object.keys(formatter);
+const formatOptions = Object.keys(formatter);
 
 module.exports = {
     /**
      * @property {string[]} options List of format options
      */
-    options,
+    options: formatOptions,
     /**
      * Get a registered formatter
      *
      * @param {string} name A formatter name
+     * @param {FormatterOptions} [options] Formatter options, @todo: currently not in use
      * @returns {Formatter} Returns a formatter object
      */
-    getFormatter(name) {
+    getFormatter(name, options = { stream: process.stdout }) {
         if (typeof formatter[name] === 'undefined') {
             throw new Error(
                 [
                     `The --format option "${name}" is unknown.`,
                     'Please use one of the following:',
-                    options.join(', ')
+                    formatOptions.join(', ')
                 ].join(' ')
             );
         }
-        return new formatter[name]();
+        return new formatter[name](options);
     }
 };
