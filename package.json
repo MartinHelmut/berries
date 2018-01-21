@@ -10,6 +10,7 @@
     "commitmsg": "node node_modules/@commitlint/cli/lib/cli.js -e $GIT_PARAMS",
     "precommit": "lint-staged",
     "publish": "lerna publish --conventional-commits --exact",
+    "bootstrap": "lerna bootstrap --hoist",
     "lint": "lerna exec --parallel -- eslint '**/*.js'",
     "test": "cross-env NODE_ENV=development lerna exec --parallel -- jest --env=node",
     "test:coverage": "cross-env NODE_ENV=development lerna exec -- jest --env=node --coverage src && cat ./coverage/lcov.info | coveralls",
