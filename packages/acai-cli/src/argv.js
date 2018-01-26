@@ -29,6 +29,11 @@ module.exports = function getConfiguredArgv(input) {
                 default: 'human',
                 description: 'Return format for the scanner output'
             },
+            branch: {
+                alias: 'b',
+                default: 'human',
+                description: 'Branch to run stats on, default is master'
+            },
             help: {
                 alias: 'h',
                 description: 'Show this help'

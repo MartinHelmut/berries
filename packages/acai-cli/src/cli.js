@@ -13,11 +13,14 @@ const { getFormatter } = require('./format');
 // Right now I use it to use the formatter if initialized for the error handling.
 let formatter = null;
 
-async function main({ cwd = process.cwd(), format }) {
+async function main({ cwd = process.cwd(), format, branch }) {
     const repo = path.resolve(cwd);
 
     formatter = getFormatter(format);
-    await scanner(repo, { dispatch: formatter.add.bind(formatter) });
+    await scanner(repo, {
+        dispatch: formatter.add.bind(formatter),
+        branchName: branch
+    });
 
     console.log(formatter.flush());
 }
