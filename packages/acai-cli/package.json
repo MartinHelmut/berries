@@ -40,7 +40,7 @@
     "@berries/acai": "1.1.2",
     "ora": "1.3.0",
     "strip-ansi": "4.0.0",
-    "yargs": "10.1.1"
+    "yargs": "11.0.0"
   },
   "publishConfig": {
     "access": "public"
