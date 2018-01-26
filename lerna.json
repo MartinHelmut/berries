@@ -9,6 +9,9 @@
         "publish": {
             "message": "chore(release): publish %s",
             "exact": true
+        },
+        "bootstrap": {
+            "hoist": true
         }
     }
 }
