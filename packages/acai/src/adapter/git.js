@@ -35,7 +35,7 @@ module.exports = {
         let depthIndex = 0;
 
         return new Promise((resolve, reject) => {
-            if (depth && typeof depth === 'number') {
+            if (typeof depth === 'number') {
                 history.on('commit', commit => {
                     depthIndex++;
                     commits.push(commit);
