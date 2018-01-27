@@ -72,26 +72,9 @@ module.exports = class HumanFormatter {
      * @returns {string} The formatted scanner result
      */
     flush() {
-        const { fixes, hotspots, time } = this.result;
-        const timeInSeconds = (time / 1000).toFixed(2);
-        const maxLenght = hotspots.reduce((length, spot) => {
-            const spotLength = String(spot.score).length;
-            return length < spotLength ? spotLength : length;
-        }, 0);
-        const successMessage = `Found ${fixes.length} fix(es) in ${
-            hotspots.length
-        } file(s) (in ${timeInSeconds}s).`;
-        const output =
-            hotspots.length > 0
-                ? `\nShow ${hotspots.length} hot spots:\n  ${'Score'.padEnd(
-                      maxLenght
-                  )}   File\n${hotspots
-                      .map(
-                          ({ score, file }) =>
-                              `  ${String(score).padEnd(maxLenght)} - ${file}`
-                      )
-                      .join('\n')}\n`
-                : '';
+        const { hotspots } = this.result;
+        const successMessage = this._getSuccessMessage();
+        const output = this._getOutputMessage();
 
         if (this.timer) {
             clearTimeout(this.timer);
@@ -100,7 +83,7 @@ module.exports = class HumanFormatter {
         this.spinner.succeed(successMessage);
 
         return hotspots.length > TO_LONG_FOR_ONE_SCREEN
-            ? `${output}\n${successMessage} Top results are on top of the list.`
+            ? `${output}${successMessage} Top results are on top of the list.`
             : output;
     }
     /**
@@ -114,5 +97,43 @@ module.exports = class HumanFormatter {
             clearTimeout(this.timer);
         }
         this.spinner.fail(error.message);
+    }
+    /**
+     * Generate and return the success message
+     *
+     * @private
+     * @returns {string} Success message
+     */
+    _getSuccessMessage() {
+        const { fixes, hotspots, time } = this.result;
+        const timeInSeconds = (time / 1000).toFixed(2);
+
+        return `Found ${fixes.length} fix(es) in ${
+            hotspots.length
+        } file(s) (in ${timeInSeconds}s).`;
+    }
+    /**
+     * Return the generated output list of hot fixes
+     *
+     * @private
+     * @returns {string} Output list
+     */
+    _getOutputMessage() {
+        const { hotspots } = this.result;
+        const maxLenght = hotspots.reduce((length, spot) => {
+            const spotLength = String(spot.score).length;
+            return length < spotLength ? spotLength : length;
+        }, 0);
+
+        return hotspots.length > 0
+            ? `\nShow ${hotspots.length} hot spots:\n  ${'Score'.padEnd(
+                  maxLenght
+              )}   File\n${hotspots
+                  .map(
+                      ({ score, file }) =>
+                          `  ${String(score).padEnd(maxLenght)} - ${file}`
+                  )
+                  .join('\n')}\n\n`
+            : '';
     }
 };
