@@ -34,6 +34,11 @@ module.exports = function getConfiguredArgv(input) {
                 default: 'master',
                 description: 'Branch to run stats on, default is master'
             },
+            depth: {
+                alias: 'D',
+                description:
+                    'Define how many commits in the past should be considered'
+            },
             help: {
                 alias: 'h',
                 description: 'Show this help'
