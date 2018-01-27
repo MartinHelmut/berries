@@ -37,7 +37,8 @@ module.exports = function getConfiguredArgv(input) {
             depth: {
                 alias: 'D',
                 description:
-                    'Define how many commits in the past should be considered'
+                    'Define how many commits in the past should be considered',
+                type: 'number'
             },
             help: {
                 alias: 'h',

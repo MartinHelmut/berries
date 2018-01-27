@@ -17,6 +17,11 @@ async function main({ cwd = process.cwd(), format, branch, depth }) {
     const repo = path.resolve(cwd);
 
     formatter = getFormatter(format);
+
+    if (!Number.isInteger(depth) && !depth) {
+        throw new TypeError('Option --depth can only take integer values');
+    }
+
     await scanner(repo, {
         dispatch: formatter.add.bind(formatter),
         branchName: branch,
@@ -27,6 +32,6 @@ async function main({ cwd = process.cwd(), format, branch, depth }) {
 }
 
 main(argv).catch(err => {
-    formatter ? console.error(formatter.error(err)) : console.error(err);
+    formatter ? formatter.error(err) : console.error(err);
     process.exit(1);
 });
