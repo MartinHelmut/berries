@@ -81,14 +81,17 @@ module.exports = class HumanFormatter {
         const successMessage = `Found ${fixes.length} fix(es) in ${
             hotspots.length
         } file(s) (in ${timeInSeconds}s).`;
-        const output = `\nShow ${
-            hotspots.length
-        } hot spots:\n  ${'Score'.padEnd(maxLenght)}   File\n${hotspots
-            .map(
-                ({ score, file }) =>
-                    `  ${String(score).padEnd(maxLenght)} - ${file}`
-            )
-            .join('\n')}\n`;
+        const output =
+            hotspots.length > 0
+                ? `\nShow ${hotspots.length} hot spots:\n  ${'Score'.padEnd(
+                      maxLenght
+                  )}   File\n${hotspots
+                      .map(
+                          ({ score, file }) =>
+                              `  ${String(score).padEnd(maxLenght)} - ${file}`
+                      )
+                      .join('\n')}\n`
+                : '';
 
         if (this.timer) {
             clearTimeout(this.timer);
