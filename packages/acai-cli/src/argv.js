@@ -31,7 +31,7 @@ module.exports = function getConfiguredArgv(input) {
             },
             branch: {
                 alias: 'b',
-                default: 'human',
+                default: 'master',
                 description: 'Branch to run stats on, default is master'
             },
             help: {
