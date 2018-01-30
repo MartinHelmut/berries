@@ -32,7 +32,7 @@ const actions = require('./actions');
 /**
  * @global
  * @namespace ScannerOptions
- * @property {string} [branchName=master] The branch name to scan
+ * @property {string} [branchName=<currently selected>] The branch name to scan
  * @property {number} [depth=Infinity] Scan depth or "how many commits in the past"
  * @property {string} [fileGlob=*] A glob pattern for which files should be considered
  * @property {dispatchCallback} [dispatch] An interface for external use of inner actions
@@ -50,14 +50,14 @@ const actions = require('./actions');
 /**
  * Scan repository for hot-spots
  *
- * @param {string} repoPath Path to a repository
+ * @param {string} path Path to a repository
  * @param {ScannerOptions} [options={}] options Options to configure the scanner
  * @returns {Promise<ScannerResult>} The analysed scanner results
  */
 module.exports = async function scanner(
-    repoPath,
+    path,
     {
-        branchName = 'master',
+        branch,
         depth,
         fileGlob = '*',
         dispatch = () => undefined,
@@ -70,7 +70,7 @@ module.exports = async function scanner(
     const commits = await Promise.all(
         git
             .filterCommits(
-                await git.getCommits(repoPath, branchName, depth),
+                await git.getCommits({ path, branch, depth }),
                 commitMessage => pattern.test(commitMessage)
             )
             .map(async commit => {

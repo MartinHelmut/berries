@@ -3,8 +3,11 @@
 // @todo: This whole file is just stuffed together in a hurry, so, it should be refactored 👷
 
 const nodegit = {};
-let registry = {};
-let commitHistory = [];
+let registry = {
+    master: {}
+};
+let commitHistory = {};
+let currentBranch = 'master';
 let interval = null;
 let index = 0;
 
@@ -14,14 +17,15 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function __setHistory(history) {
+function __setHistory(branch, history) {
     // Reset data on history set
     clearInterval(interval);
-    registry = {};
+    registry[branch] = {};
+    commitHistory[branch] = [];
     index = 0;
     // Create event emitted commit history
     let date = Date.now();
-    commitHistory = history
+    commitHistory[branch] = history
         .map(item => {
             return {
                 message() {
@@ -59,7 +63,7 @@ function __setHistory(history) {
 
 const History = {
     on(event, callback) {
-        registry[event] = (...args) => {
+        registry[currentBranch][event] = (...args) => {
             if (event === 'end') {
                 clearInterval(interval);
             }
@@ -68,13 +72,14 @@ const History = {
     },
     start() {
         interval = setInterval(() => {
-            const cm = commitHistory[index];
+            const cm = commitHistory[currentBranch][index];
             if (cm instanceof Error) {
-                registry.error(cm);
+                registry[currentBranch].error(cm);
             }
             cm
-                ? registry.commit && registry.commit(cm)
-                : registry.end(commitHistory);
+                ? registry[currentBranch].commit &&
+                  registry[currentBranch].commit(cm)
+                : registry[currentBranch].end(commitHistory[currentBranch]);
             index++;
         }, 10);
     },
@@ -94,6 +99,7 @@ const Repository = {
         return Promise.resolve(this);
     },
     async checkoutBranch(branchName) {
+        currentBranch = branchName;
         return Promise.resolve();
     },
     async getMasterCommit() {
