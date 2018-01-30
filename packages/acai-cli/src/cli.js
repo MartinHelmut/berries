@@ -18,7 +18,7 @@ async function main({ cwd = process.cwd(), format, branch, depth }) {
 
     formatter = getFormatter(format);
 
-    if (!Number.isInteger(depth) && !depth) {
+    if (depth && !Number.isInteger(depth)) {
         throw new TypeError('Option --depth can only take integer values');
     }
 
