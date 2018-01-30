@@ -24,7 +24,7 @@ async function main({ cwd = process.cwd(), format, branch, depth }) {
 
     await scanner(repo, {
         dispatch: formatter.add.bind(formatter),
-        branchName: branch,
+        branch,
         depth
     });
 
