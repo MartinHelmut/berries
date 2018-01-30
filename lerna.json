@@ -7,7 +7,7 @@
             "exact": true
         },
         "publish": {
-            "message": "chore(release): publish %s",
+            "message": "chore(release): publish packages",
             "exact": true
         },
         "bootstrap": {
