@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/MartinHelmut/berries/compare/@berries/acai-cli@1.1.1...@berries/acai-cli@1.1.2) (2018-01-30)
+
+
+### Bug Fixes
+
+* **acai-cli:** check if depth is defined and afterwards if integer ([e614688](https://github.com/MartinHelmut/berries/commit/e614688))
+
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/MartinHelmut/berries/compare/@berries/acai-cli@1.1.0...@berries/acai-cli@1.1.1) (2018-01-30)
 
