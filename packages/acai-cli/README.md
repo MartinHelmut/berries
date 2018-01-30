@@ -71,7 +71,7 @@ $ npx @berries/acai-cli
 | --version |       | Show the installed CLI version                                          |
 | --cwd     | -d    | Define a different git repository, e.g.: `$ acai -d "path/to/git/repo"` |
 | --format  | -F    | Define the output format. Available options: `human`                    |
-| --branch  | -b    | Branch to run stats on, default is master                               |
+| --branch  | -b    | Branch to run stats on, default branch is the currently selected        |
 | --depth   | -D    | Define how many commits in the past should be considered                |
 
 ## License
