@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/MartinHelmut/berries/compare/@berries/acai-cli@1.0.4...@berries/acai-cli@1.1.0) (2018-01-30)
+
+
+### Bug Fixes
+
+* **acai-cli:** ignore result list on empty hotspot list ([7af9d5a](https://github.com/MartinHelmut/berries/commit/7af9d5a))
+* **acai-cli:** make bin file executable ([7094a65](https://github.com/MartinHelmut/berries/commit/7094a65))
+* **acai-cli:** wrong default for branch name ([8a1013d](https://github.com/MartinHelmut/berries/commit/8a1013d))
+
+
+### Features
+
+* **acai-cli:** add flag to define branch ([d6f7152](https://github.com/MartinHelmut/berries/commit/d6f7152))
+* **acai-cli:** add new format option for commit depth ([27e8fbe](https://github.com/MartinHelmut/berries/commit/27e8fbe))
+
+
+
+
 <a name="1.0.4"></a>
 ## [1.0.4](https://github.com/MartinHelmut/berries/compare/@berries/acai-cli@1.0.3...@berries/acai-cli@1.0.4) (2018-01-21)
 

@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/MartinHelmut/berries/compare/@berries/acai@1.1.2...@berries/acai@2.0.0) (2018-01-30)
+
+
+### Bug Fixes
+
+* **acai:** check commit depth only for number type ([8343888](https://github.com/MartinHelmut/berries/commit/8343888))
+
+
+### Code Refactoring
+
+* **acai:** do not checkout branch ([6fe95a9](https://github.com/MartinHelmut/berries/commit/6fe95a9))
+
+
+### BREAKING CHANGES
+
+* **acai:** This changes how the library functions for getCommits is called. Reason is to use the current by user defined branch and not checkout a default one.
+
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/MartinHelmut/berries/compare/@berries/acai@1.1.1...@berries/acai@1.1.2) (2018-01-21)
 
