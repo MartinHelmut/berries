@@ -7,14 +7,14 @@ const actions = require('../actions');
 
 describe('scanner()', () => {
     beforeEach(() =>
-        nodegit.__setHistory([
+        nodegit.__setHistory('master', [
             'fix number one',
             'another commit',
             'another fix\nanother line'
         ])
     );
 
-    afterEach(() => nodegit.__setHistory([]));
+    afterEach(() => nodegit.__setHistory('master', []));
 
     test('returns a proper shaped object', async () => {
         const actual = await scanner('repo/path');

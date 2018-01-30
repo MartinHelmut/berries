@@ -17,18 +17,28 @@ const nodegit = require('nodegit');
  * @returns {boolean}
  */
 
+/**
+ * @global
+ * @namespace CommitOptions
+ * @property {string} path The path to the repository
+ * @property {string} branch The target branch name
+ * @property {number} [depth=Infinity] How much commits in the past should be considered
+ */
+
 module.exports = {
     /**
      * Get commit message messages.
      *
-     * @param {string} repoPath The path to the repository
-     * @param {string} branchName The target branch name
-     * @param {number} [depth=Infinity] How much commits in the past should be considered
+     * @param {CommitOptions} options Commit getter options
      * @returns {Promise<Object>} Returns a promise resolving to an array of commit objects
      */
-    async getCommits(repoPath, branchName, depth) {
-        const repo = await nodegit.Repository.open(repoPath);
-        await repo.checkoutBranch(branchName);
+    async getCommits({ path, branch, depth }) {
+        const repo = await nodegit.Repository.open(path);
+
+        if (typeof branch === 'string') {
+            await repo.checkoutBranch(branch);
+        }
+
         const commit = await repo.getMasterCommit();
         const history = commit.history();
         const commits = [];
