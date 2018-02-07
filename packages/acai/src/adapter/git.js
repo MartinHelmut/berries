@@ -34,9 +34,6 @@ module.exports = {
      */
     async getCommits({ path, branch, depth }) {
         const repo = await nodegit.Repository.open(path);
-
-        console.log('branch:', branch);
-
         if (typeof branch === 'string') {
             await repo.checkoutBranch(branch);
         }
