@@ -103,16 +103,14 @@ Tested with Node 8 and NPM 5 and up. Also this repository is organised as a mono
 Clone the repo and run an install:
 
 ```shell
-$ git clone git@github.com:MartinHelmut/berries.git && cd berries && npm install && npm run bootstrap
+$ git clone git@github.com:MartinHelmut/berries.git && cd berries && npm install
 ```
 
 To only bootstrap the application run:
 
 ```shell
-npm run bootstrap
+npx lerna bootstrap
 ```
-
-This is a shortcut for `npx lerna bootstrap --hoist`.
 
 ### Tests
 

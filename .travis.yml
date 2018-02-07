@@ -4,7 +4,6 @@ node_js:
   - '8'
 install:
   - npm install
-  - lerna bootstrap
 script:
   - npm run fmt:check
   - npm run lint
