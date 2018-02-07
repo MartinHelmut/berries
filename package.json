@@ -11,9 +11,9 @@
     "precommit": "lint-staged",
     "publish": "lerna publish --conventional-commits",
     "lint": "lerna exec --parallel -- eslint '**/*.js'",
-    "test": "cross-env NODE_ENV=development lerna exec --parallel -- jest --env=node",
-    "test:coverage": "cross-env NODE_ENV=development lerna exec -- jest --env=node --coverage src && cat ./coverage/lcov.info | coveralls",
-    "fmt:check": "lerna exec --parallel -- prettier --tab-width 4 --single-quote --list-different 'src/**/*.js'",
+    "test": "cross-env NODE_ENV=development lerna exec --parallel -- jest",
+    "test:coverage": "cross-env NODE_ENV=development lerna exec -- jest --coverage src && cat ./coverage/lcov.info | coveralls",
+    "fmt:check": "lerna exec --parallel -- prettier --list-different 'src/**/*.js'",
     "postinstall": "lerna bootstrap"
   },
   "engines": {
@@ -28,7 +28,7 @@
   },
   "lint-staged": {
     "*.{js,md,json}": [
-      "prettier --write --tab-width 4 --single-quote",
+      "prettier --write",
       "git add"
     ]
   },
@@ -43,6 +43,13 @@
       "node": true,
       "jest": true
     }
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "singleQuote": true
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "devDependencies": {
     "@commitlint/cli": "6.1.0",
