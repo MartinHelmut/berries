@@ -6,6 +6,7 @@
 [![lerna][lnimg]][lnurl]
 [![Commitizen friendly][cfimg]][cfurl]
 [![code style: prettier][ptimg]][pturl]
+[![Known Vulnerabilities][snimg]][snurl]
 
 _Berries_ includes helper and tools to speed up and support your daily developer workflow. So it is more like a toolset with different libraries, command line interfaces and plugins to help and support people in there work. Currently the following packages are included:
 
@@ -31,3 +32,5 @@ All packages and tools are released under the **MIT licence**.
 [cfurl]: http://commitizen.github.io/cz-cli/
 [ptimg]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 [pturl]: https://github.com/prettier/prettier
+[snimg]: https://snyk.io/test/github/martinhelmut/berries/badge.svg?targetFile=package.json
+[snurl]: https://snyk.io/test/github/martinhelmut/berries?targetFile=package.json
