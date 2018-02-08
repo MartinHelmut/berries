@@ -15,6 +15,7 @@
 [![lerna][lnimg]][lnurl]
 [![Commitizen friendly][cfimg]][cfurl]
 [![code style: prettier][ptimg]][pturl]
+[![Known Vulnerabilities][snimg]][snurl]
 
 **Calculate bug spots in git repositories based on commit messages.**
 
@@ -91,3 +92,5 @@ MIT
 [ptimg]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 [pturl]: https://github.com/prettier/prettier
 [acurl]: https://github.com/MartinHelmut/berries/tree/master/packages/acai
+[snimg]: https://snyk.io/test/github/martinhelmut/berries/badge.svg?targetFile=packages%2Facai-cli%2Fpackage.json
+[snurl]: https://snyk.io/test/github/martinhelmut/berries?targetFile=packages%2Facai-cli%2Fpackage.json
