@@ -95,7 +95,7 @@ const Commit = {
 };
 
 const Repository = {
-    async open(repoPath) {
+    async open() {
         return Promise.resolve(this);
     },
     async checkoutBranch(branchName) {
