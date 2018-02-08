@@ -28,10 +28,12 @@ async function main({ cwd = process.cwd(), format, branch, depth }) {
         depth
     });
 
+    // eslint-disable-next-line no-console
     console.log(formatter.flush());
 }
 
 main(argv).catch(err => {
+    // eslint-disable-next-line no-console
     formatter ? formatter.error(err) : console.error(err);
     process.exit(1);
 });
