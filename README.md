@@ -1,6 +1,13 @@
-# Berries
-
-... pick the one you love!
+<p align="center">
+    <img
+        src="https://raw.githubusercontent.com/MartinHelmut/berries/master/logo.svg?sanitize=true"
+        width="640"
+        height="136"
+        alt="The Berries logo with it's glorious dots and the text berries next to it."
+    />
+    <br />
+    ... pick the ones you love!
+</p>
 
 [![Build Status][bsurl]][bsimg]
 [![lerna][lnimg]][lnurl]
