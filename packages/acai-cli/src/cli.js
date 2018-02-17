@@ -13,7 +13,7 @@ const { getFormatter } = require('./format');
 // Right now I use it to use the formatter if initialized for the error handling.
 let formatter = null;
 
-async function main({ cwd = process.cwd(), format, branch, depth }) {
+async function main({ cwd = process.cwd(), format, branch, depth, files }) {
     const repo = path.resolve(cwd);
 
     formatter = getFormatter(format);
@@ -25,7 +25,8 @@ async function main({ cwd = process.cwd(), format, branch, depth }) {
     await scanner(repo, {
         dispatch: formatter.add.bind(formatter),
         branch,
-        depth
+        depth,
+        files
     });
 
     // eslint-disable-next-line no-console
