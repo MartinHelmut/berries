@@ -17,7 +17,7 @@
     "cli",
     "berries"
   ],
-  "author": "Martin Helmut Fieber <info@martin-fieber.de> (http://martin-fieber.de)",
+  "author": "Martin Helmut Fieber <info@martin-fieber.de> (https://martin-fieber.de)",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/MartinHelmut/berries/issues"
   },
-  "homepage": "https://github.com/MartinHelmut/berries/tree/master/packages/acai-cli",
+  "homepage": "https://pick-your-berries.net",
   "engines": {
     "node": ">=8",
     "npm": ">=5"

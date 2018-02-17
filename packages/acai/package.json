@@ -16,7 +16,7 @@
     "library",
     "berries"
   ],
-  "author": "Martin Helmut Fieber <info@martin-fieber.de> (http://martin-fieber.de)",
+  "author": "Martin Helmut Fieber <info@martin-fieber.de> (https://martin-fieber.de)",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/MartinHelmut/berries/issues"
   },
-  "homepage": "https://github.com/MartinHelmut/berries/tree/master/packages/acai",
+  "homepage": "https://pick-your-berries.net",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
@@ -36,17 +36,14 @@
     "__mocks__",
     "logo.svg"
   ],
-  "jest": {
-    "setupTestFrameworkScriptFile": "./src/setupTests.js"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "micromatch": "3.1.5",
     "nodegit": "0.20.3"
   },
   "devDependencies": {
     "jsdoc": "3.5.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

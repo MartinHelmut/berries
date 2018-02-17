@@ -123,7 +123,7 @@ $ npm test
 and to lint the code:
 
 ```shell
-$ npm run lint
+$ npm run lint:js && npm run lint:css
 ```
 
 ### Format check
