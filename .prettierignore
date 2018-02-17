@@ -1,3 +1,5 @@
+node_modules/
+packages/acai/coverage/
+packages/acai/docs/
 CHANGELOG.md
 package.json
-package-lock.json
