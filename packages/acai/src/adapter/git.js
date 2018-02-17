@@ -96,7 +96,7 @@ module.exports = {
         return (await commit.getDiff()).reduce(async (accFiles, diff) => {
             // @todo: The `await diff.patches()` here takes almost 95% of the time the whole program needs.
             // Maybe I could execute `git diff-tree --no-commit-id --name-only -r ${commit.sha()}` directly on
-            // a commit reference to speet it up?
+            // a commit reference to speed it up?
             const files = (await diff.patches()).map(patch =>
                 patch.oldFile().path()
             );
