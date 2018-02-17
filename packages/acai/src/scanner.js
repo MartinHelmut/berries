@@ -34,7 +34,7 @@ const actions = require('./actions');
  * @namespace ScannerOptions
  * @property {string} [branchName=<currently selected>] The branch name to scan
  * @property {number} [depth=Infinity] Scan depth or "how many commits in the past"
- * @property {string} [fileGlob=*] A glob pattern for which files should be considered
+ * @property {string[]} [files=['*']] One or more glob patterns for which files should be considered
  * @property {dispatchCallback} [dispatch] An interface for external use of inner actions
  * @property {RegExp} [pattern=/^(?:(?!branch.+into\s'master').)*\bfix(?:ed|es)?|close(?:s|d)?\b/i] An expression to match commit messages and excludes master merges
  */
@@ -59,7 +59,7 @@ module.exports = async function scanner(
     {
         branch,
         depth,
-        fileGlob = '*',
+        files = ['*'],
         dispatch = () => undefined,
         pattern = /^(?:(?!branch.+into 'master').)*\bfix(?:ed|es)?|close(?:s|d)?\b/i
     } = {}
@@ -82,7 +82,7 @@ module.exports = async function scanner(
     );
     dispatch(actions.commits(commits));
 
-    const fixes = commit.filterByFileGlob(commits, fileGlob);
+    const fixes = commit.filterByFilePatterns(commits, files);
     dispatch(actions.fixes(fixes));
 
     const hotspots = spots.normalize(spots.calculate(fixes));

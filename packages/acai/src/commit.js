@@ -5,11 +5,11 @@
 'use strict';
 
 /**
- * A glob matcher in javascript. See http://www.globtester.com/ for more information
- * @external minimatch
- * @see {@link https://github.com/isaacs/minimatch}
+ * A glob matcher in javascript. See {@link http://www.globtester.com/} for more information on how to test globs.
+ * @external micromatch
+ * @see {@link https://github.com/micromatch/micromatch}
  */
-const minimatch = require('minimatch');
+const micromatch = require('micromatch');
 
 /**
  * @global
@@ -24,17 +24,15 @@ module.exports = {
      * Filter commits by file glob
      *
      * @param {Commit[]} commits A list of commit messages
-     * @param {string} fileGlob A minimatch compatible file glob
+     * @param {string[]} patterns A minimatch compatible file glob
      * @returns {Commit[]} A filtered list of commit messages
      */
-    filterByFileGlob(commits, fileGlob) {
-        if (fileGlob === '*') {
+    filterByFilePatterns(commits, patterns) {
+        if (patterns.length === 1 && patterns[0] === '*') {
             return commits;
         }
         return commits.reduce((result, fix) => {
-            const files = fix.files.filter(
-                minimatch.filter(fileGlob, { nocase: true })
-            );
+            const files = micromatch(fix.files, patterns, { nocase: true });
             if (files.length === 0) {
                 return result;
             }
