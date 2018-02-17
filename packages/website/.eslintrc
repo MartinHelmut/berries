@@ -1,0 +1,25 @@
+{
+    "extends": ["../../.eslintrc", "prettier", "plugin:react/recommended"],
+    "plugins": ["react", "import", "jsx-a11y"],
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "react/prop-types": 0,
+        "react/jsx-indent": [1, 4],
+        "react/jsx-indent-props": [1, 4],
+        "jsx-a11y/anchor-is-valid": [
+            "error",
+            {
+                "components": ["a"]
+            }
+        ]
+    }
+}
