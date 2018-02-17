@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/MartinHelmut/berries/compare/@berries/acai@2.0.3...@berries/acai@3.0.0) (2018-02-17)
+
+
+### Features
+
+* **acai:** support multiple file globs ([4877314](https://github.com/MartinHelmut/berries/commit/4877314))
+
+
+### BREAKING CHANGES
+
+* **acai:** scanner option fileGlob is now files and takes an array of globs
+
+
+
+
 <a name="2.0.3"></a>
 ## [2.0.3](https://github.com/MartinHelmut/berries/compare/@berries/acai@2.0.2...@berries/acai@2.0.3) (2018-02-08)
 
