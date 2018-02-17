@@ -70,3 +70,4 @@ jspm_packages/
 .idea/
 packages/**/docs/
 lerna-debug.log
+package-lock.json
