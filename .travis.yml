@@ -6,7 +6,8 @@ install:
   - npm install
 script:
   - npm run fmt:check
-  - npm run lint
+  - npm run lint:js
+  - npm run lint:css
   - npm test
 after_success:
   - lerna run test:coverage
