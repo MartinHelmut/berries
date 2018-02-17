@@ -39,6 +39,12 @@ module.exports = function getConfiguredArgv(input) {
                     'Define how many commits in the past should be considered',
                 type: 'number'
             },
+            files: {
+                alias: 'f',
+                array: true,
+                description: 'One or more file patterns to match against',
+                type: 'string'
+            },
             help: {
                 alias: 'h',
                 description: 'Show this help'
@@ -52,6 +58,10 @@ module.exports = function getConfiguredArgv(input) {
             'If executed inside a git repository this is all you need'
         )
         .example('$ $0 --cwd="path/to"', 'If executed outside a git repository')
+        .example(
+            '$ $0 --files "*.cpp" "**/*.h"',
+            'To filter for specific files'
+        )
         .showHelpOnFail(false, 'Use --help to show all available options')
         .strict();
     return argv;

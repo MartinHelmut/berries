@@ -66,14 +66,15 @@ $ npx @berries/acai-cli
 
 ### Options
 
-| Option    | Short | Description                                                             |
-| --------- | ----- | ----------------------------------------------------------------------- |
-| --help    | -h    | Show the help text for acai command line tool                           |
-| --version |       | Show the installed CLI version                                          |
-| --cwd     | -d    | Define a different git repository, e.g.: `$ acai -d "path/to/git/repo"` |
-| --format  | -F    | Define the output format. Available options: `human`                    |
-| --branch  | -b    | Branch to run stats on, default branch is the currently selected        |
-| --depth   | -D    | Define how many commits in the past should be considered                |
+| Option    | Short | Description                                                                                                       |
+| --------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
+| --help    | -h    | Show the help text for acai command line tool                                                                     |
+| --version |       | Show the installed CLI version                                                                                    |
+| --cwd     | -d    | Define a different git repository, e.g.: `$ acai -d "path/to/git/repo"`                                           |
+| --format  | -F    | Define the output format. Available options: `human`                                                              |
+| --branch  | -b    | Branch to run stats on, default branch is the currently selected                                                  |
+| --depth   | -D    | Define how many commits in the past should be considered                                                          |
+| --files   | -f    | One or more file patterns to match against. You can use [http://www.globtester.com][glurl] to test your patterns. |
 
 ## License
 
@@ -94,3 +95,4 @@ MIT
 [acurl]: https://github.com/MartinHelmut/berries/tree/master/packages/acai
 [snimg]: https://snyk.io/test/github/martinhelmut/berries/badge.svg?targetFile=packages%2Facai-cli%2Fpackage.json
 [snurl]: https://snyk.io/test/github/martinhelmut/berries?targetFile=packages%2Facai-cli%2Fpackage.json
+[glurl]: http://www.globtester.com/

@@ -49,5 +49,20 @@ describe('argv', () => {
         test('"depth" option can be defined by shortcut "D"', () => {
             expect(argv('-D 42').depth).toBe(42);
         });
+
+        test('"files" option takes a single file glob', () => {
+            expect(argv('--files **/*.js').files).toEqual(['**/*.js']);
+        });
+
+        test('"files" option can take multiple file globs', () => {
+            expect(argv('--files **/*.js *.md').files).toEqual([
+                '**/*.js',
+                '*.md'
+            ]);
+        });
+
+        test('"files" option can be defined by shortcut "f"', () => {
+            expect(argv('-f **/*.cpp').files).toEqual(['**/*.cpp']);
+        });
     });
 });
