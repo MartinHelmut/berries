@@ -13,7 +13,7 @@
     "lint": "lerna exec --parallel -- eslint '**/*.js'",
     "test": "cross-env NODE_ENV=development lerna exec --parallel -- jest",
     "test:coverage": "cross-env NODE_ENV=development lerna exec -- jest --coverage src && cat ./coverage/lcov.info | coveralls",
-    "fmt:check": "lerna exec --parallel -- prettier --list-different 'src/**/*.js'",
+    "fmt:check": "prettier --list-different \"**/*.{js,md,json}\"",
     "postinstall": "lerna bootstrap"
   },
   "engines": {
