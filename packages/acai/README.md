@@ -102,13 +102,13 @@ The `time` property contains the execution time for the calculation in milliseco
 
 The second argument of the `scanner` function takes an options object:
 
-| Option       | Default                                                                            | Description                                                                                                                                |
-| ------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `branchName` | `<currently selected branch>`                                                      | The branch that should be used. **Attention**: If a specific branch name is given the library performs a real checkout in that repository. |
-| `depth`      | `Infinity`                                                                         | How many commits in the past should be consired.                                                                                           |
-| `fileGlob`   | `"*"`                                                                              | Which files are relevant to check for fixes. This uses a file glob, see [http://www.globtester.com][glurl] to test your pattern.           |
-| `pattern`    | /^(?:(?!branch.+into 'master').)\*\bfix(?:ed&#124;es)?&#124;close(?:s&#124;d)?\b/i | A pattern to match against commit messages. The default one tries to exclude master merges.                                                |
-| `dispatch`   | `() => undefined`                                                                  | Listen to scanner actions. For more information read [listen for dispatched actions](../../docs/acai/dispatch.md)                          |
+| Option       | Default                                                                            | Description                                                                                                                                      |
+| ------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `branchName` | `<currently selected branch>`                                                      | The branch that should be used. **Attention**: If a specific branch name is given the library performs a real checkout in that repository.       |
+| `depth`      | `Infinity`                                                                         | How many commits in the past should be consired.                                                                                                 |
+| `files`      | `["*"]`                                                                            | Which files are relevant to check for fixes. This uses one or multiple file globs, see [http://www.globtester.com][glurl] to test your patterns. |
+| `pattern`    | /^(?:(?!branch.+into 'master').)\*\bfix(?:ed&#124;es)?&#124;close(?:s&#124;d)?\b/i | A pattern to match against commit messages. The default one tries to exclude master merges.                                                      |
+| `dispatch`   | `() => undefined`                                                                  | Listen to scanner actions. For more information read [listen for dispatched actions](../../docs/acai/dispatch.md)                                |
 
 ## Disclaimer
 

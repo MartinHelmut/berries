@@ -43,7 +43,7 @@
     "access": "public"
   },
   "dependencies": {
-    "minimatch": "3.0.4",
+    "micromatch": "3.1.5",
     "nodegit": "0.20.3"
   },
   "devDependencies": {
