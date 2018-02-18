@@ -37,7 +37,7 @@
     "logo.svg"
   ],
   "dependencies": {
-    "micromatch": "3.1.5",
+    "micromatch": "3.1.6",
     "nodegit": "0.20.3"
   },
   "devDependencies": {
