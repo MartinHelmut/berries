@@ -40,6 +40,9 @@
     "gatsby-plugin-sitemap": "1.2.13",
     "gatsby-plugin-typography": "1.7.14",
     "gatsby-transformer-sharp": "1.6.19",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-helmet": "5.2.0",
     "typography": "0.16.6"
   }
 }
