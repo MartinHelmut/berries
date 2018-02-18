@@ -55,5 +55,10 @@
     "serve": "6.4.10",
     "stylelint": "8.4.0",
     "stylelint-config-standard": "18.1.0"
+  },
+  "dependencies": {
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-helmet": "5.2.0"
   }
 }
