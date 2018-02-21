@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/MartinHelmut/berries/compare/@berries/acai@3.0.0...@berries/acai@3.1.0) (2018-02-21)
+
+
+### Bug Fixes
+
+* **acai:** add correct TypeScript typings ([a24617f](https://github.com/MartinHelmut/berries/commit/a24617f))
+
+
+### Features
+
+* **website:** bootstrap basic berries documentation ([1a4ba37](https://github.com/MartinHelmut/berries/commit/1a4ba37))
+
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/MartinHelmut/berries/compare/@berries/acai@2.0.3...@berries/acai@3.0.0) (2018-02-17)
 
