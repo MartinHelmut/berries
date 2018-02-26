@@ -38,7 +38,7 @@
   ],
   "dependencies": {
     "micromatch": "3.1.9",
-    "nodegit": "0.20.3"
+    "nodegit": "0.21.0"
   },
   "devDependencies": {
     "jsdoc": "3.5.5"
