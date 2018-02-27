@@ -1,5 +1,7 @@
 node_modules/
 packages/acai/coverage/
 packages/acai/docs/
+packages/website/public/
+packages/website/.cache/
 CHANGELOG.md
 package.json
