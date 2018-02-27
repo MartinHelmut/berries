@@ -34,15 +34,15 @@ This is the command line tool that uses the [@berries/acai][acurl] library to ca
 
 ## Table of contents
 
-* [Environment](#environment)
-* [Usage](#usage)
-    * [Options](#options)
-* [License](#license)
+*   [Environment](#environment)
+*   [Usage](#usage)
+    *   [Options](#options)
+*   [License](#license)
 
 ## Environment
 
-* Node >= 8
-* NPM >= 5
+*   Node >= 8
+*   NPM >= 5
 
 ## Usage
 
