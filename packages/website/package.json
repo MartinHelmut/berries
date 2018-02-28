@@ -29,7 +29,7 @@
     "npm": ">=5"
   },
   "dependencies": {
-    "gatsby": "1.9.219",
+    "gatsby": "1.9.220",
     "gatsby-cli": "1.1.44",
     "gatsby-image": "1.0.39",
     "gatsby-link": "1.6.37",
