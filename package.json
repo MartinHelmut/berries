@@ -52,7 +52,7 @@
     "lint-staged": "7.0.0",
     "prettier": "1.11.0",
     "react-test-renderer": "16.2.0",
-    "serve": "6.5.0",
+    "serve": "6.5.1",
     "stylelint": "9.1.1",
     "stylelint-config-standard": "18.1.0"
   }
