@@ -29,15 +29,15 @@
     "npm": ">=5"
   },
   "dependencies": {
-    "gatsby": "1.9.239",
-    "gatsby-cli": "1.1.47",
+    "gatsby": "1.9.240",
+    "gatsby-cli": "1.1.48",
     "gatsby-image": "1.0.42",
     "gatsby-link": "1.6.39",
     "gatsby-plugin-netlify": "1.0.19",
     "gatsby-plugin-react-helmet": "2.0.8",
     "gatsby-plugin-remove-trailing-slashes": "1.0.8",
     "gatsby-plugin-sharp": "1.6.41",
-    "gatsby-plugin-sitemap": "1.2.19",
+    "gatsby-plugin-sitemap": "1.2.20",
     "gatsby-plugin-typography": "1.7.18",
     "gatsby-transformer-sharp": "1.6.22",
     "react": "16.2.0",
