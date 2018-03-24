@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.1"></a>
+## [3.1.1](https://github.com/MartinHelmut/berries/compare/@berries/acai@3.1.0...@berries/acai@3.1.1) (2018-03-24)
+
+
+
+
+**Note:** Version bump only for package @berries/acai
+
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/MartinHelmut/berries/compare/@berries/acai@3.0.0...@berries/acai@3.1.0) (2018-02-21)
 
