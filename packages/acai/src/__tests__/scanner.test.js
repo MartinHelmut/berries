@@ -11,8 +11,7 @@ describe('scanner()', () => {
             'fix number one',
             'another commit',
             'another fix\nanother line'
-        ])
-    );
+        ]));
 
     afterEach(() => nodegit.__setHistory('master', []));
 
