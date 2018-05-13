@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.2"></a>
+## [3.1.2](https://github.com/MartinHelmut/berries/compare/@berries/acai@3.1.1...@berries/acai@3.1.2) (2018-05-13)
+
+
+### Bug Fixes
+
+* update dependency nodegit to v0.22.0 ([899db94](https://github.com/MartinHelmut/berries/commit/899db94))
+
+
+
+
 <a name="3.1.1"></a>
 ## [3.1.1](https://github.com/MartinHelmut/berries/compare/@berries/acai@3.1.0...@berries/acai@3.1.1) (2018-03-24)
 
