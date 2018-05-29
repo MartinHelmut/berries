@@ -23,17 +23,17 @@ This JavaScript library calculates a list of files that where bug prone in the r
 
 ## Table of contents
 
-*   [Environment](#environment)
-*   [How to use the library](#how-to-use-the-library)
-    *   [Quick start](#quick-start)
-    *   [Options](#options)
-*   [Disclaimer](#disclaimer)
-*   [License](#license)
+-   [Environment](#environment)
+-   [How to use the library](#how-to-use-the-library)
+    -   [Quick start](#quick-start)
+    -   [Options](#options)
+-   [Disclaimer](#disclaimer)
+-   [License](#license)
 
 ## Environment
 
-*   Node >= 8
-*   NPM >= 5
+-   Node >= 8
+-   NPM >= 5
 
 ## How to use the library
 
@@ -114,8 +114,8 @@ The second argument of the `scanner` function takes an options object:
 
 This implementation was inspired by multiple other similar packages in different languages, e.g.:
 
-*   [bugspots][b1url] from [igrigorik][u1url] (Ruby)
-*   [python-bugspots][b2url] from [niedbalski][u2url] (Python)
+-   [bugspots][b1url] from [igrigorik][u1url] (Ruby)
+-   [python-bugspots][b2url] from [niedbalski][u2url] (Python)
 
 The idea behind this tool came from a 2011 article by Google called ["Bug prediction by Google"][bpurl]. Later there was also a [case study going deeper into detail][cgurl] as well as [Predicting Faults from Cached History][pfurl]. The whole idea to "predict bugs" on a code base was then stopped because of no real benefits to the developer (see also ["Issues with Google’s Bug Prediction Algorithm"][biurl]).
 
