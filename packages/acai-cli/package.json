@@ -1,6 +1,6 @@
 {
   "name": "@berries/acai-cli",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "CLI tool calculate bugs in git repositories based on commit messages.",
   "bin": {
     "acai": "bin.js"
