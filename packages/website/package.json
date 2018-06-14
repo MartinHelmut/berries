@@ -29,9 +29,9 @@
     "npm": ">=5"
   },
   "dependencies": {
-    "gatsby": "1.9.270",
+    "gatsby": "1.9.271",
     "gatsby-cli": "1.1.58",
-    "gatsby-image": "1.0.52",
+    "gatsby-image": "1.0.53",
     "gatsby-link": "1.6.44",
     "gatsby-plugin-netlify": "1.0.21",
     "gatsby-plugin-react-helmet": "2.0.11",
