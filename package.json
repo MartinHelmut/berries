@@ -53,7 +53,7 @@
     "prettier": "1.13.5",
     "react-test-renderer": "16.4.1",
     "serve": "8.2.0",
-    "stylelint": "9.2.1",
+    "stylelint": "9.3.0",
     "stylelint-config-standard": "18.2.0"
   }
 }
