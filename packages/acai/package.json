@@ -5,7 +5,9 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "docs": "jsdoc -c .jsdoc.json --verbose && npx serve docs"
+    "docs": "jsdoc -c .jsdoc.json --verbose && npx serve docs",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "predict",
@@ -38,12 +40,14 @@
   ],
   "dependencies": {
     "micromatch": "3.1.10",
-    "nodegit": "0.22.1"
+    "nodegit": "0.22.1",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "jsdoc": "3.5.5"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "snyk": true
 }
