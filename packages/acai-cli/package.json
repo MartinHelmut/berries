@@ -6,7 +6,9 @@
     "acai": "bin.js"
   },
   "scripts": {
-    "docs": "echo 'There is no documentation for this package.'"
+    "docs": "echo 'There is no documentation for this package.'",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "predict",
@@ -40,9 +42,11 @@
     "@berries/acai": "3.1.2",
     "ora": "2.1.0",
     "strip-ansi": "4.0.0",
-    "yargs": "11.0.0"
+    "yargs": "11.0.0",
+    "snyk": "^1.83.0"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "snyk": true
 }
