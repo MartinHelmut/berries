@@ -6,3 +6,12 @@ patch:
   'npm:lodash:20180130':
     - gatsby > webpack-configurator > lodash:
         patched: '2018-07-03T05:56:18.574Z'
+  'npm:tunnel-agent:20170305':
+    - gatsby-plugin-sharp > imagemin-pngquant > pngquant-bin > bin-build > download > caw > tunnel-agent:
+        patched: '2018-06-27T05:57:49.823Z'
+    - gatsby-plugin-sharp > imagemin-pngquant > pngquant-bin > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-06-27T05:57:49.823Z'
+    - gatsby-plugin-sharp > imagemin-webp > cwebp-bin > bin-build > download > caw > tunnel-agent:
+        patched: '2018-06-27T05:57:49.823Z'
+    - gatsby-plugin-sharp > imagemin-webp > cwebp-bin > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-06-27T05:57:49.823Z'
