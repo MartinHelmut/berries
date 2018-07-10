@@ -4,16 +4,6 @@ const argv = require('../argv');
 
 describe('argv', () => {
     describe('getConfiguredArgv()', () => {
-        test('returns a configuration object', () => {
-            const options = argv();
-            expect(options).toEqual(
-                expect.objectContaining({
-                    help: expect.any(Boolean),
-                    version: expect.any(Boolean)
-                })
-            );
-        });
-
         test('"cwd" option can be defined', () => {
             expect(argv('--cwd="foo/path"').cwd).toBe('foo/path');
         });
