@@ -165,7 +165,7 @@ Create a "Pull Request" on Github and be awesome! 😎
 1.  Make changes
 2.  Commit those changes with `npm run commit`
 3.  Make sure all tests turn green with `npm test`
-4.  Publish: `npm run publish`
+4.  Publish: `NPM_CONFIG_OTP=XXXXXX npm run publish` (replace `XXXXXX` with a valid 2FA token)
 5.  **Done!**
 
 For more information on building a release see [https://github.com/conventional-changelog/standard-version][svurl]
