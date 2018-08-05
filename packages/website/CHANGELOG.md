@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/MartinHelmut/berries/compare/@berries/website@1.1.2...@berries/website@1.1.4) (2018-08-05)
+
+
+### Bug Fixes
+
+* packages/website/.snyk & packages/website/package.json to reduce vulnerabilities ([7e7ee66](https://github.com/MartinHelmut/berries/commit/7e7ee66))
+* packages/website/.snyk & packages/website/package.json to reduce vulnerabilities ([af429f9](https://github.com/MartinHelmut/berries/commit/af429f9))
+* packages/website/package.json to reduce vulnerabilities ([d4d1370](https://github.com/MartinHelmut/berries/commit/d4d1370))
+* packages/website/package.json to reduce vulnerabilities ([f2c21b9](https://github.com/MartinHelmut/berries/commit/f2c21b9))
+
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/MartinHelmut/berries/compare/@berries/website@1.1.2...@berries/website@1.1.3) (2018-07-10)
 
