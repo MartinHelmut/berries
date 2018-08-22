@@ -43,7 +43,7 @@
     "ora": "3.0.0",
     "strip-ansi": "4.0.0",
     "yargs": "12.0.1",
-    "snyk": "1.92.3"
+    "snyk": "1.92.6"
   },
   "publishConfig": {
     "access": "public"
