@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.5"></a>
+## [1.3.5](https://github.com/MartinHelmut/berries/compare/@berries/acai-cli@1.3.4...@berries/acai-cli@1.3.5) (2018-09-09)
+
+
+### Bug Fixes
+
+* packages/acai-cli/.snyk & packages/acai-cli/package.json to reduce vulnerabilities ([af06210](https://github.com/MartinHelmut/berries/commit/af06210))
+
+
+
+
 <a name="1.3.4"></a>
 ## [1.3.4](https://github.com/MartinHelmut/berries/compare/@berries/acai-cli@1.3.2...@berries/acai-cli@1.3.4) (2018-08-05)
 
