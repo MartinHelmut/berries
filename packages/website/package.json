@@ -45,7 +45,7 @@
     "react": "16.5.0",
     "react-dom": "16.5.0",
     "react-helmet": "5.2.0",
-    "snyk": "1.95.2",
+    "snyk": "1.95.3",
     "typography": "0.16.17"
   },
   "snyk": true
