@@ -31,7 +31,7 @@
     "npm": ">=5"
   },
   "dependencies": {
-    "gatsby": "1.9.277",
+    "gatsby": "1.9.278",
     "gatsby-cli": "1.1.58",
     "gatsby-image": "1.0.55",
     "gatsby-link": "1.6.46",
