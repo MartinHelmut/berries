@@ -15,7 +15,6 @@
 [![lerna][lnimg]][lnurl]
 [![Commitizen friendly][cfimg]][cfurl]
 [![code style: prettier][ptimg]][pturl]
-[![Known Vulnerabilities][snimg]][snurl]
 
 **Calculate bug spots in git repositories based on commit messages.**
 
@@ -147,5 +146,3 @@ MIT
 [b2url]: https://github.com/niedbalski/python-bugspots
 [u2url]: https://github.com/niedbalski
 [hmurl]: https://en.wikipedia.org/wiki/Heat_map
-[snimg]: https://snyk.io/test/github/martinhelmut/berries/badge.svg?targetFile=packages%2Facai%2Fpackage.json
-[snurl]: https://snyk.io/test/github/martinhelmut/berries?targetFile=packages%2Facai%2Fpackage.json
