@@ -40,8 +40,8 @@
     "gatsby-plugin-sitemap": "1.2.25",
     "gatsby-plugin-typography": "1.7.19",
     "gatsby-transformer-sharp": "1.6.27",
-    "react": "16.6.1",
-    "react-dom": "16.6.1",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
     "react-helmet": "5.2.0",
     "typography": "0.16.17"
   }
