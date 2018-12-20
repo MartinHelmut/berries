@@ -17,6 +17,7 @@ module.exports = {
         'gatsby-plugin-sharp',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-remove-trailing-slashes',
-        'gatsby-plugin-netlify'
+        'gatsby-plugin-netlify',
+        'gatsby-plugin-styled-components'
     ]
 };

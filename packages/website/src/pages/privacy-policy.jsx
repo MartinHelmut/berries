@@ -1,10 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
+import Layout from '../components/layout';
 import Heading from '../components/heading';
 import Text from '../components/text';
 
 const PrivacyPolicy = () => (
-    <Fragment>
+    <Layout>
         <Heading order={2}>Privacy notice</Heading>
         <Text>
             My website may be used without entering personal information.
@@ -35,9 +36,10 @@ const PrivacyPolicy = () => (
         </Text>
         <Heading order={3}>Cookies</Heading>
         <Text>
-            There are no cookies here. Seriously, not even any analytics script is used.
+            There are no cookies here. Seriously, not even any analytics script
+            is used.
         </Text>
-    </Fragment>
+    </Layout>
 );
 
 export default PrivacyPolicy;
