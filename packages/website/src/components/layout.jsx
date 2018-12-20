@@ -5,7 +5,7 @@ import Heading from '../components/heading';
 import Footer from '../components/footer';
 import Link from '../components/link';
 
-const MainLayout = ({ children }) => (
+const Layout = ({ children }) => (
     <Container>
         <Link
             to="/"
@@ -13,7 +13,7 @@ const MainLayout = ({ children }) => (
         >
             <Heading>berries</Heading>
         </Link>
-        <main>{children()}</main>
+        <main>{children}</main>
         <Footer>
             <Link
                 to="/legal-notice"
@@ -32,4 +32,4 @@ const MainLayout = ({ children }) => (
     </Container>
 );
 
-export default MainLayout;
+export default Layout;

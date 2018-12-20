@@ -1,23 +1,29 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
+import Layout from '../components/layout';
 import Heading from '../components/heading';
 import Text from '../components/text';
 import Address from '../components/address';
 
 const LegalNotice = () => (
-    <Fragment>
+    <Layout>
         <Heading order={2}>Legal notice</Heading>
         <Text>Information in accordance with section 5 TMG</Text>
         <Address>
-            Martin Helmut Fieber<br />
-            Heiligengeiststr. 14<br />
+            Martin Helmut Fieber
+            <br />
+            Heiligengeiststr. 14
+            <br />
             21335 L&uuml;neburg
         </Address>
         <Heading order={3}>Contact</Heading>
         <Text>
-            Telephone: +49 174 3821210<br />
-            E-Mail: info@martin-fieber.de<br />
-            Website: https://pick-your-berries.net<br />
+            Telephone: +49 174 3821210
+            <br />
+            E-Mail: info@martin-fieber.de
+            <br />
+            Website: https://pick-your-berries.net
+            <br />
         </Text>
         <Heading order={3}>Disclaimer</Heading>
         <Heading order={4}>Accountability for content</Heading>
@@ -53,7 +59,7 @@ const LegalNotice = () => (
             utilization of copyrighted works is punishable (§ 106 of the
             copyright law).
         </Text>
-    </Fragment>
+    </Layout>
 );
 
 export default LegalNotice;

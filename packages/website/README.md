@@ -13,7 +13,7 @@ The berries documentation website.
 For developing the berries documentation (and hot reloading and all that stuff) you can use the following command:
 
 ```shell
-$ npm run develop
+$ npm run dev
 ```
 
 To build the documentation:
