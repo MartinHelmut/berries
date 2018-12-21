@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.6](https://github.com/MartinHelmut/berries/compare/@berries/acai-cli@1.3.5...@berries/acai-cli@1.3.6) (2018-12-21)
+
+**Note:** Version bump only for package @berries/acai-cli
+
+
+
+
+
 <a name="1.3.5"></a>
 ## [1.3.5](https://github.com/MartinHelmut/berries/compare/@berries/acai-cli@1.3.4...@berries/acai-cli@1.3.5) (2018-09-09)
 
