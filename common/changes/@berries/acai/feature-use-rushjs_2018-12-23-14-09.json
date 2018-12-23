@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@berries/acai",
+      "comment": "Move mono repository from Lerna to Rush.js",
+      "type": "major"
+    }
+  ],
+  "packageName": "@berries/acai",
+  "email": "info@martin-fieber.de"
+}

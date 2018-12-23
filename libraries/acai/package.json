@@ -1,0 +1,52 @@
+{
+  "name": "@berries/acai",
+  "version": "3.1.6",
+  "description": "Library to calculate bugs in git repositories based on commit messages.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "docs": "jsdoc -c .jsdoc.json --verbose && serve docs",
+    "lint": "eslint '**/*.js'",
+    "test": "jest",
+    "format": "prettier --write \"**/*.{js,css,md,json}\"",
+    "format-check": "prettier --list-different \"**/*.{js,ts,css,md,json}\"",
+    "build": "echo 'There is no build necessary for libraries/acai'"
+  },
+  "keywords": [
+    "predict",
+    "bugs",
+    "git",
+    "commit",
+    "acai",
+    "library",
+    "berries"
+  ],
+  "author": "Martin Helmut Fieber <info@martin-fieber.de> (https://martin-fieber.de)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MartinHelmut/berries.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MartinHelmut/berries/issues"
+  },
+  "homepage": "https://pick-your-berries.net",
+  "files": [
+    "index.js",
+    "src/",
+    "__mocks__",
+    "logo.svg"
+  ],
+  "dependencies": {
+    "micromatch": "3.1.10",
+    "nodegit": "0.24.0",
+    "request": "2.88.0"
+  },
+  "devDependencies": {
+    "eslint": "5.13.0",
+    "jest": "24.0.0",
+    "jsdoc": "3.5.5",
+    "prettier": "1.16.4",
+    "serve": "10.1.1"
+  }
+}

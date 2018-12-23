@@ -1,4 +1,5 @@
+# Deployment is currently deactivated based on problems with Next.js
 [build]
-base    = "packages/website"
-publish = "packages/website/public"
+base    = "apps/website"
+publish = "apps/website/public"
 command = "npm run build"
