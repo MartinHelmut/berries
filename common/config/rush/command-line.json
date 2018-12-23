@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
+  "commands": [
+    {
+      "commandKind": "bulk",
+      "name": "lint",
+      "summary": "Lint each project sources",
+      "description": "This looks for the 'lint' npm-script in each package and executes it. The lint npm-scripts will lint the project sources with the associated linting tool defined inside the project itself.",
+      "enableParallelism": true,
+      "ignoreMissingScript": true
+    },
+    {
+      "commandKind": "bulk",
+      "name": "test",
+      "summary": "Test each project sources",
+      "description": "This looks for the 'test' npm-script in each package and executes it. The test npm-scripts will run the defined test suite.",
+      "enableParallelism": true,
+      "ignoreMissingScript": true
+    },
+    {
+      "commandKind": "bulk",
+      "name": "format",
+      "summary": "Format each project sources with prettier",
+      "description": "This looks for the 'format' npm-script in each package and executes it. The format npm-scripts will format the project sources with prettier.",
+      "enableParallelism": true,
+      "ignoreMissingScript": true
+    },
+    {
+      "commandKind": "bulk",
+      "name": "format-check",
+      "summary": "Check each project sources for a proper format with prettier",
+      "description": "This looks for the 'format-check' npm-script in each package and executes it. The format-check npm-scripts will check the format of the project sources with prettier.",
+      "enableParallelism": true,
+      "ignoreMissingScript": true
+    }
+  ]
+}

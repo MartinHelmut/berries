@@ -1,12 +1,12 @@
 <p align="center">
-    <img
-        src="https://raw.githubusercontent.com/MartinHelmut/berries/master/logo.svg?sanitize=true"
-        width="640"
-        height="136"
-        alt="The Berries logo with it's glorious dots and the text berries next to it."
-    />
-    <br />
-    ... pick the ones you love!
+  <img
+    src="https://raw.githubusercontent.com/MartinHelmut/berries/master/logo.svg?sanitize=true"
+    width="640"
+    height="136"
+    alt="The Berries logo with it's glorious dots and the text berries next to it."
+  />
+  <br />
+  ... pick the ones you love!
 </p>
 
 [![Build Status][bsurl]][bsimg]
@@ -20,11 +20,11 @@ _Berries_ includes helper and tools to speed up and support your daily developer
 
 Currently included are the following libraries:
 
--   ![the acai logo as small icon](packages/acai/logo-ico.gif) [@berries/acai](/packages/acai) - Calculate bugs in git repositories based on commit messages with this handy library
+- ![the acai logo as small icon](packages/acai/logo-ico.gif) [@berries/acai](/packages/acai) - Calculate bugs in git repositories based on commit messages with this handy library
 
 ## Tools
 
--   ![the acai cli logo as small icon](packages/acai-cli/logo-ico.gif) [@berries/acai-cli](/packages/acai-cli) - Calculate bugs in git repositories based on commit messages by command line tool
+- ![the acai cli logo as small icon](packages/acai-cli/logo-ico.gif) [@berries/acai-cli](/packages/acai-cli) - Calculate bugs in git repositories based on commit messages by command line tool
 
 ## License
 

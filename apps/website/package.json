@@ -1,0 +1,59 @@
+{
+  "name": "@berries/website",
+  "version": "1.1.6",
+  "private": true,
+  "description": "The awesome berries documentation website.",
+  "scripts": {
+    "dev": "next",
+    "build": "next build && next export -o public",
+    "start": "next start",
+    "lint": "eslint '**/*.js' && stylelint 'src/*.css'",
+    "test": "jest",
+    "format": "prettier --write \"**/*.{js,css,md,json}\"",
+    "format-check": "prettier --list-different \"**/*.{js,css,md,json}\"",
+    "docs": "echo 'There is no documentation for this package, this package IS the documentation!'"
+  },
+  "keywords": [
+    "website",
+    "berries",
+    "documentation"
+  ],
+  "author": "Martin Helmut Fieber <info@martin-fieber.de> (https://martin-fieber.de)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MartinHelmut/berries.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MartinHelmut/berries/issues"
+  },
+  "homepage": "https://pick-your-berries.net",
+  "dependencies": {
+    "next": "7.0.2",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "react-helmet": "5.2.0",
+    "styled-components": "4.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.3.1",
+    "@babel/preset-react": "7.0.0",
+    "babel-jest": "24.0.0",
+    "babel-plugin-styled-components": "1.10.0",
+    "enzyme": "3.8.0",
+    "enzyme-adapter-react-16": "1.8.0",
+    "eslint": "5.13.0",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.12.4",
+    "jest": "24.0.0",
+    "prettier": "1.16.4",
+    "regenerator-runtime": "0.13.1",
+    "stylelint": "9.10.1",
+    "stylelint-config-recommended": "2.1.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-processor-styled-components": "1.5.2"
+  }
+}
