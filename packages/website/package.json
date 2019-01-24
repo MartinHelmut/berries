@@ -29,7 +29,7 @@
     "npm": ">=5"
   },
   "dependencies": {
-    "gatsby": "2.0.93",
+    "gatsby": "2.0.95",
     "gatsby-cli": "2.4.8",
     "gatsby-image": "2.0.27",
     "gatsby-link": "2.0.9",
@@ -40,7 +40,7 @@
     "gatsby-plugin-sitemap": "2.0.4",
     "gatsby-plugin-styled-components": "3.0.4",
     "gatsby-plugin-typography": "2.2.5",
-    "gatsby-transformer-sharp": "2.1.10",
+    "gatsby-transformer-sharp": "2.1.12",
     "react": "16.7.0",
     "react-dom": "16.7.0",
     "react-helmet": "5.2.0",
