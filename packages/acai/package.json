@@ -1,6 +1,6 @@
 {
   "name": "@berries/acai",
-  "version": "3.1.5",
+  "version": "3.1.6",
   "description": "Library to calculate bugs in git repositories based on commit messages.",
   "main": "index.js",
   "types": "index.d.ts",
