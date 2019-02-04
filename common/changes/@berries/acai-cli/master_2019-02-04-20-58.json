@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@berries/acai-cli",
+      "comment": "Fix paths to logo and usage example animation assets.",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@berries/acai-cli",
+  "email": "info@martin-fieber.de"
+}

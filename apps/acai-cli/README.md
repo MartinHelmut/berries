@@ -2,7 +2,7 @@
 
 <p align="center">
     <img
-        src="https://raw.githubusercontent.com/MartinHelmut/berries/master/packages/acai-cli/logo.svg?sanitize=true"
+        src="https://raw.githubusercontent.com/MartinHelmut/berries/master/apps/acai-cli/logo.svg?sanitize=true"
         width="350"
         height="255"
         alt="Berries acai cli logo with three berries and two leafs shown."
@@ -24,7 +24,7 @@ This is the command line tool that uses the [@berries/acai][acurl] library to ca
 
 <p align="center">
     <img
-        src="https://cdn.rawgit.com/MartinHelmut/berries/24b7e579/packages/acai-cli/usage-example.svg"
+        src="https://cdn.rawgit.com/MartinHelmut/berries/master/apps/acai-cli/usage-example.svg"
         width="620"
         height="378"
         alt="Animated usage example of the acai cli."

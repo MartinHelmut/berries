@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@berries/acai",
+      "comment": "Fix paths for shown logo assets.",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@berries/acai",
+  "email": "info@martin-fieber.de"
+}

@@ -20,11 +20,11 @@ _Berries_ includes helper and tools to speed up and support your daily developer
 
 Currently included are the following libraries:
 
-- ![the acai logo as small icon](packages/acai/logo-ico.gif) [@berries/acai](/packages/acai) - Calculate bugs in git repositories based on commit messages with this handy library
+- ![the acai logo as small icon](libraries/acai/logo-ico.gif) [@berries/acai](/libraries/acai) - Calculate bugs in git repositories based on commit messages with this handy library
 
 ## Tools
 
-- ![the acai cli logo as small icon](packages/acai-cli/logo-ico.gif) [@berries/acai-cli](/packages/acai-cli) - Calculate bugs in git repositories based on commit messages by command line tool
+- ![the acai cli logo as small icon](apps/acai-cli/logo-ico.gif) [@berries/acai-cli](/apps/acai-cli) - Calculate bugs in git repositories based on commit messages by command line tool
 
 ## License
 
