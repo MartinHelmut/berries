@@ -29,7 +29,7 @@
   },
   "homepage": "https://pick-your-berries.net",
   "dependencies": {
-    "next": "7.0.2",
+    "next": "7.0.3",
     "react": "16.7.0",
     "react-dom": "16.7.0",
     "react-helmet": "5.2.0",
