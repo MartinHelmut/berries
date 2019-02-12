@@ -39,7 +39,7 @@
   ],
   "dependencies": {
     "micromatch": "3.1.10",
-    "nodegit": "0.24.0",
+    "nodegit": "0.24.1",
     "request": "2.88.0"
   },
   "devDependencies": {
