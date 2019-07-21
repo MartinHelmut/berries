@@ -108,9 +108,7 @@ module.exports = class HumanFormatter {
     const { fixes, hotspots, time } = this.result;
     const timeInSeconds = (time / 1000).toFixed(2);
 
-    return `Found ${fixes.length} fix(es) in ${
-      hotspots.length
-    } file(s) (in ${timeInSeconds}s).`;
+    return `Found ${fixes.length} fix(es) in ${hotspots.length} file(s) (in ${timeInSeconds}s).`;
   }
   /**
    * Return the generated output list of hot fixes
