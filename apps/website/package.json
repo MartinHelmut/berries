@@ -5,7 +5,7 @@
   "description": "The awesome berries documentation website.",
   "scripts": {
     "dev": "next",
-    "build": "next build && next export",
+    "build": "next build && next export -s",
     "start": "next start",
     "docs": "yarn start",
     "lint": "eslint '**/*.js' && stylelint 'src/*.css'",

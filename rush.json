@@ -24,5 +24,8 @@
       "packageName": "@berries/website",
       "projectFolder": "apps/website"
     }
-  ]
+  ],
+  "repository": {
+    "url": "git@github.com:MartinHelmut/berries.git"
+  }
 }
