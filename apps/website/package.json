@@ -8,7 +8,7 @@
     "build": "next build && next export -s",
     "start": "next start",
     "docs": "yarn start",
-    "lint": "eslint '**/*.js' && stylelint 'src/*.css'",
+    "lint": "eslint '**/*.js' && stylelint 'components/*.jsx'",
     "test": "jest --passWithNoTests",
     "format": "prettier --write \"**/*.{js,css,md,json}\"",
     "format-check": "prettier --list-different \"**/*.{js,css,md,json}\""
