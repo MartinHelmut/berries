@@ -8,7 +8,7 @@
     "docs": "jsdoc -c .jsdoc.json --verbose && serve docs",
     "lint": "eslint '**/*.js'",
     "test": "jest",
-    "format": "prettier --write \"**/*.{js,css,md,json}\"",
+    "format": "prettier --write \"**/*.{js,ts,css,md,json}\"",
     "format-check": "prettier --list-different \"**/*.{js,ts,css,md,json}\"",
     "build": "echo 'There is no build necessary for libraries/acai'"
   },
