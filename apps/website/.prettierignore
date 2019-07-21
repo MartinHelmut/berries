@@ -1,5 +1,4 @@
 node_modules/
 .next/
-public/
+out/
 CHANGELOG.md
-package.json

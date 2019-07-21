@@ -31,8 +31,7 @@ This JavaScript library calculates a list of files that where bug prone in the r
 
 ## Environment
 
-- Node >= 8
-- NPM >= 5
+- Provided automatically through Rush
 
 ## How to use the library
 
@@ -40,8 +39,15 @@ This JavaScript library calculates a list of files that where bug prone in the r
 
 Install the library with:
 
-```shell
-$ npm install @berries/acai
+```bash
+# npm
+npm install @berries/acai
+
+# Yarn
+yarn add @berries/acai
+
+# pnpm
+pnpm install @berries/acai
 ```
 
 The simplest way to use the library to scan for bug spots in files could be explained in the following example:
@@ -55,16 +61,15 @@ The simplest way to use the library to scan for bug spots in files could be expl
 })();
 ```
 
-Not run that file and it will print the results of that repository:
+Now run that file and it will print the results of that repository:
 
-```shell
-$ node ./index.js
+```bash
+node ./index.js
 ```
 
 The resulting object contains `fixes`, `hotspots` and `time`. The `fixes` property contains an array of objects including the commit message that is associated to a bugfix, a unix timestamp from when the commit is and all files (with relatives path from the root of the repository) that where touched with that commit. This could look like this:
 
 ```json
-// Fixes:
 [
   {
     "message": "commit message that introduced a fix",
@@ -82,7 +87,6 @@ The resulting object contains `fixes`, `hotspots` and `time`. The `fixes` proper
 The `hotspots` property contains the calculated score associated to a file as array sorted from the highest score to the lowest:
 
 ```json
-// Hotspots:
 [
   {
     "file": "relative/path/file2.ext",

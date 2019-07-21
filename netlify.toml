@@ -1,5 +1,4 @@
-# Deployment is currently deactivated based on problems with Next.js
 [build]
 base    = "apps/website"
 publish = "apps/website/public"
-command = "npm run build"
+command = "yarn run build"

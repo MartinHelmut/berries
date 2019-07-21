@@ -40,27 +40,30 @@ This is the command line tool that uses the [@berries/acai][acurl] library to ca
 
 ## Environment
 
-- Node >= 8
-- NPM >= 5
+- Provided automatically through Rush
 
 ## Usage
 
-You can install the CLI with:
+You can install the CLI globally with:
 
-```shell
-$ npm i @berries/acai-cli -g
+```bash
+npm i @berries/acai-cli -g
 ```
 
 and run the _acai-cli_ inside a git repository (other version control systems will be follow):
 
-```shell
-$ acai
+```bash
+acai
 ```
 
-or use npx and run acai directly:
+or use npx/pnpx and run acai directly:
 
-```shell
-$ npx @berries/acai-cli
+```bash
+# npm
+npx @berries/acai-cli
+
+# pnpm
+pnpx @berries/acai-cli
 ```
 
 ### Options

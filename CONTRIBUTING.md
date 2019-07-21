@@ -7,10 +7,6 @@ are the best!
 
 - [Issues](#issues)
   - [General](#general)
-  - [Labels](#labels)
-    - [Common labels](#common-labels)
-    - [Type labels](#type-labels)
-    - [Status labels](#status-labels)
 - [Working in the code](#working-in-the-code)
   - [Environment](#environment)
   - [Setup](#setup)
@@ -48,41 +44,6 @@ If you report a bug, please try to:
 
 Once you have tried the above, create a GitHub issue notifying your bug report.
 
-### Labels
-
-Right now there are three types of labels:
-
-- Common labels
-- Type labels
-- Status labels
-
-#### Common labels
-
-| Label            | Use case                                                                                                 |
-| ---------------- | -------------------------------------------------------------------------------------------------------- |
-| good first issue | This label is set if the issue could be resolved by someone who does not know the project.               |
-| help wanted      | If there is something where people with different knowledge could really help pushing the issue further. |
-
-#### Type labels
-
-| Label               | Description                                                 |
-| ------------------- | ----------------------------------------------------------- |
-| type: bug           | This label is used if the issue describes a bug.            |
-| type: documentation | Write or change documentation for the project.              |
-| type: draft         | Describes as a ongoing process a new berry library or tool. |
-| type: feature       | Implements a new feature ot changes existing behaivior.     |
-| type: question      | Something that should be discussed with others.             |
-
-#### Status labels
-
-| Label               | Status                                                                   |
-| ------------------- | ------------------------------------------------------------------------ |
-| status: blocked     | An issue is block of reasons that are mentioned inside the issue itself. |
-| status: in progress | The one who is assigned works on that issue.                             |
-| status: PR made     | An PR was made and the issue is in his final steps.                      |
-
-**Note:** For _not started yet_ or _finished_ are no status labels required.
-
 ## Working in the code
 
 If you want to contribute code, please:
@@ -96,52 +57,57 @@ Once you have tried the above, create a GitHub pull request with your changes ch
 
 ### Environment
 
-Tested with Node 8 and NPM 5 and up. Also this repository is organised as a monorepo and uses [lerna][lnurl].
+Tested with Node 10. Also this repository is organised as a monorepo and uses [Rush][rhurl].
 
 ### Setup
 
-Clone the repo and run an install:
+To work with this repository you need to have [Rush][rhurl] installed. A how too can be found at the [getting started with Rush page][rsurl]. You can check if everything worked fine by running:
 
-```shell
-$ git clone git@github.com:MartinHelmut/berries.git && cd berries && npm install
+```bash
+$ rush -v
+
+Rush Multi-Project Build Tool 5.10.3 (unmanaged) - https://rushjs.io
+
+usage: rush [-h] [-d] <command> ...
+rush: error: too few arguments
 ```
 
-To only bootstrap the application run:
+If this was successful you can Clone the repo and run the setup:
 
-```shell
-npx lerna bootstrap
+```bash
+git clone git@github.com:MartinHelmut/berries.git && cd berries && rush update
 ```
+
+There is also a list of [everyday commands for Rush][reurl].
 
 ### Tests
 
 Tests are written in [Jest][jturl]. To run all tests execute
 
-```shell
-$ npm test
+```bash
+rush test
 ```
 
 and to lint the code:
 
-```shell
-$ npm run lint:js && npm run lint:css
+```bash
+rush lint
 ```
 
 ### Format check
 
-You can also run a prettier verification for all JS files in all packages with:
+You can also run a prettier verification in all packages with:
 
-```shell
-$ npm run fmt:check
+```bash
+rush format-check
 ```
-
-This will list changes that would be made on commit (commit hook is installed with husky).
 
 ### Show documentation
 
 To create and serve the documentation run the following command **inside a specific package**:
 
-```shell
-$ npm run docs
+```bash
+rushx docs
 ```
 
 ### Commit changes
@@ -156,25 +122,36 @@ $ git checkout -b task/do-something
 
 **There is no specific naming convention for branches.**
 
-Add your changes and run `npm run commit` to start the commitizen cli to create a proper commit message.
+Add your changes and commit them with a nice and commitizen friendly message. This could look like:
 
-Create a "Pull Request" on Github and be awesome! 😎
+```
+feat(apps/website): add a new feature
+```
+
+When you did all your changes run
+
+```bash
+rush change
+```
+
+that will prompt you with some questions through the process of creating a change log entry.
+
+And finally create a "Pull Request" on Github and be awesome! 😎
 
 ### Recommended workflow for release
 
 1.  Make changes
-2.  Commit those changes with `npm run commit`
-3.  Make sure all tests turn green with `npm test`
-4.  Publish: `NPM_CONFIG_OTP=XXXXXX npm run publish` (replace `XXXXXX` with a valid 2FA token)
+2.  Commit those changes
+3.  Create a change log entry with `rush change`
+4.  Publish with `rush publish`
 5.  **Done!**
-
-For more information on building a release see [https://github.com/conventional-changelog/standard-version][svurl]
 
 ## Be Nice
 
 Please follow the defined [code of conduct](CODE_OF_CONDUCT.md).
 
-[lnurl]: https://github.com/lerna/lerna
+[rhurl]: https://rushjs.io/
+[rsurl]: https://rushjs.io/pages/intro/get_started/
+[reurl]: https://rushjs.io/pages/developer/everyday_commands/
 [czcli]: http://commitizen.github.io/cz-cli/
-[svurl]: https://github.com/conventional-changelog/standard-version
 [jturl]: https://facebook.github.io/jest/

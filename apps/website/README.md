@@ -8,29 +8,33 @@ The berries documentation website.
 [![Commitizen friendly][cfimg]][cfurl]
 [![code style: prettier][ptimg]][pturl]
 
+## Environment
+
+- Provided automatically through Rush
+
 ## Tasks
 
 For developing the berries documentation (and hot reloading and all that stuff) you can use the following command:
 
-```shell
-$ npm run dev
+```bash
+rushx dev
 ```
 
 To build the documentation:
 
-```shell
-$ npm run build
+```bash
+rush build
 ```
 
 After build to serve the documentation:
 
-```shell
-$ npm run serve
+```bash
+rushx docs
 ```
 
 ## Disclaimer
 
-This site is powered by the static site generator [GatsbyJS][gburl].
+This site is powered by the static site generator [Next.js][nxurl].
 
 ## License
 
@@ -46,4 +50,4 @@ MIT
 [cfurl]: http://commitizen.github.io/cz-cli/
 [ptimg]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 [pturl]: https://github.com/prettier/prettier
-[gburl]: https://www.gatsbyjs.org/
+[nxurl]: https://nextjs.org/
