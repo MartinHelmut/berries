@@ -14,6 +14,8 @@
 [![Commitizen friendly][cfimg]][cfurl]
 [![code style: prettier][ptimg]][pturl]
 
+**IMPORTANT: This project is deprecated and not maintained anymore by me. If you still have interest in it you can [contact me via email](mailto:info@martin-fieber.se).**
+
 _Berries_ includes helper and tools to speed up and support your daily developer workflow. So it is more like a toolset with different libraries, command line interfaces and plugins to help and support people in there work. Currently the following packages are included:
 
 ## Libraries
